@@ -9,7 +9,33 @@
 </head>
 <body>
 
+  <!-- include svg sprite -->
+  <div style="display:none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <h1 class="visually-hidden">Сайт компании Израиль</h1>
+
+  <header class="header">
+    <h2 class="visually-hidden">Израиль</h2>
+    <div class="header__wrapper">
+      <a class="header__logo">
+        <picture>
+          <source media="(min-resolution: 144dpi)" srcset="img/logo@2x.png" type="image/png">
+          <img src="img/logo.png" width="137" height="48" alt="Логотип компании Израиль">
+        </picture>
+      </a>
+
+      <a class="header__tel" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
+      <button class="header__feedback" type="button">заказать звонок</button>
+    </div>
+
+    <p class="header__text">Учёба, путешествие и карьера для еврейской молодёжи</p>
+    <img class="header__scroll-icon" src="img/icon-scroll.png" aria-hidden="true" alt="Иконка скролл">
+  </header>
+
   <script src="js/main.js"></script>
   <script src="js/picturefill.js"></script>
 </body>
 </html>
+
