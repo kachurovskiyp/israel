@@ -34,6 +34,59 @@
     <img class="header__scroll-icon" src="img/icon-scroll.png" aria-hidden="true" alt="Иконка скролл">
   </header>
 
+  <footer class="footer">
+    <a class="footer__logo">
+      <picture>
+        <source media="(min-resolution: 144dpi)" srcset="img/footer-logo@2x.png" type="image/png">
+        <img src="img/footer-logo.png" width="85" height="27" alt="Логотип компании Израиль">
+      </picture>
+    </a>
+    <p class="footer__copyright">Copyright someDesignCompany &copy;2019</p>
+    <ul class="footer__social">
+      <li>
+        <a href="#">
+          <svg width="10" height="20">
+            <use xlink:href="#icon-fb"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <svg width="22" height="18">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <svg width="20" height="20">
+            <use xlink:href="#icon-insta"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <section class="call modal">
+    <h2 class="visually-hidden">Форма заказа обратного звонка</h2>
+    <form action="index.html" class="call__form modal__inner">
+      <h3 class="call__title">Заказать звонок</h3>
+      <p class="call__text">Оставьте ваши контактные данные, мы свяжемсяс вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+
+      <label class="visually-hidden" for="name">Ваше имя</label>
+      <input type="text" name="name" id="name" placeholder="Имя">
+
+      <label class="visually-hidden" for="tel">Ваш номер телефона</label>
+      <input type="text" name="tel" id="tel" placeholder="Телефон">
+
+      <button type="submit">перезвоните мне</button>
+
+      <input type="checkbox" name="iagree" id="iagree">
+      <label for="iagree">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+    </form>
+    <button class="call__close modal__close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+  </section>
+
   <script src="js/main.js"></script>
   <script src="js/picturefill.js"></script>
 </body>
