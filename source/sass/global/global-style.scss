@@ -53,6 +53,7 @@ body {
 .modal__inner p {
   @include font-size(15px, 170%);
   opacity: 0.87;
+  max-width: 360px;
 }
 
 .modal__inner input[type="text"] {
@@ -76,7 +77,8 @@ body {
   }
 }
 
-.modal__inner button[type="submit"] {
+.modal__inner button[type="submit"],
+.modal__inner .modal__submit {
   @include font-size(17px, 20px);
   font-weight: 500;
   font-variant: small-caps;
@@ -108,5 +110,39 @@ body {
 
   -webkit-appearance: none;
   appearance: none;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 18px;
+  height: 18px;
+
+  border: none;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+
+    position: absolute;
+    top: 8px;
+    left: -4px;
+
+    background: $gradient;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+  
 }
 

@@ -1,4 +1,43 @@
+.call {
+  display: none;
+}
+
 .call form {
   width: 480px;
   height: 520px;
 }
+
+.call__iagree-label {
+  @include font-size(13px, 150%);
+  opacity: 0.74;
+
+  display: block;
+  position: relative;
+  max-width: 240px;
+  margin: 0 auto;
+  padding-left: 24px;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: 1px;
+    left: 0;
+
+    background: url(../img/icon-checkbox.svg) no-repeat;
+  }
+
+  &::after {
+    display: none;
+    background: url(../img/icon-checkbox-checked.svg);
+  }
+}
+
+.call__call__iagree-input:checked + .call__iagree-label::after {
+  display: block;
+}
+

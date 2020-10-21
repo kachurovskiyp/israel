@@ -71,7 +71,7 @@
     <h2 class="visually-hidden">Форма заказа обратного звонка</h2>
     <form action="index.html" class="call__form modal__inner">
       <h3 class="call__title">Заказать звонок</h3>
-      <p class="call__text">Оставьте ваши контактные данные, мы свяжемсяс вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+      <p class="call__text">Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
 
       <label class="visually-hidden" for="name">Ваше имя</label>
       <input type="text" name="name" id="name" placeholder="Имя">
@@ -81,10 +81,23 @@
 
       <button type="submit">перезвоните мне</button>
 
-      <input type="checkbox" name="iagree" id="iagree">
-      <label for="iagree">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+      <input class="call__call__iagree-input visually-hidden" type="checkbox" name="iagree" id="iagree">
+      <label class="call__iagree-label" for="iagree">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+      
+      <button class="call__close modal__close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </form>
-    <button class="call__close modal__close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+  </section>
+
+  <section class="accepted modal">
+    <h2 class="visually-hidden">Подтверждение принятия заявки</h2>
+    <div class="accepted__inner modal__inner">
+      <svg width="71" height="64">
+        <use xlink:href="#icon-checkmark"></use>
+      </svg>
+      <h3 class="accepted__title">Заявка принята</h3>
+      <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+      <button type="button" class="modal__submit">Понятно</button>
+    </div>
   </section>
 
   <script src="js/main.js"></script>
