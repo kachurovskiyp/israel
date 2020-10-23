@@ -16,6 +16,14 @@ body {
   color: $black;
 }
 
+.title {
+  @include monserat-font(40px, 49px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $blue;
+}
+
 .modal {
   position: fixed;
   top: 0;

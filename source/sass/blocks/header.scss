@@ -1,12 +1,10 @@
 .header {
-  max-width: $max-width;
-  min-height: 900px;
   position: relative;
   margin: 0 auto;
 
   background-image: url(../img/header-bg.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .header__wrapper {

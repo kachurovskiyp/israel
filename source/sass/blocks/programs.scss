@@ -1,0 +1,35 @@
+.programs {
+  background-image: url(../../img/programs-bg.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.programs__inner {
+  max-width: 852px;
+  margin-left: 210px;
+  margin-top: 50px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.programs__title {
+  flex-basis: 100%;
+}
+
+.programs__list {
+  @include clear-list;
+  width: 230px;
+}
+
+.programs__item button {
+  min-width: 230px;
+  min-height: 70px;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+}
+
+.programs__description {
+  max-width: 600px;
+}
