@@ -1,0 +1,107 @@
+.how {
+  display: flex;
+  padding-top: 40px;
+  padding-left: 12px;
+  margin-bottom: 160px;
+
+  background-image:
+    url(../img/how_bg.png),
+    url(../img/stamp.png);
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-position:
+    -2px -160px,
+    right center;
+}
+
+.how__inner {
+  padding-right: 140px;
+}
+
+.how__image {
+  margin-right: 106px;
+}
+
+.how__title {
+  margin-bottom: 23px;
+}
+
+.how__text {
+  @include font-size(15px, 170%);
+  opacity: 0.87;
+  max-width: 480px;
+}
+
+.how__condition {
+  @include font-size(17px, 170%);
+  font-weight: 500;
+  margin-top: 35px;
+  margin-bottom: 33px;
+  max-width: 460px;
+}
+
+.how__list {
+  @include clear-list;
+  border-left: 2px dashed rgba(72, 72, 72, 0.2);
+  counter-reset: how-item;
+  position: relative;
+  z-index: 1;
+}
+
+.how__item {
+  @include font-size(15px, 140%);
+  padding-left: 42px;
+  margin-bottom: 25px;
+  min-height: 49px;
+  max-width: 409px;
+
+  position: relative;
+
+  &::before {
+    @include font-size(17px, 36px);
+    font-weight: 700;
+    text-align: center;
+    color: $yellow;
+
+    counter-increment: how-item;
+    content: counter(how-item);
+
+    position: absolute;
+    top: -6px;
+    left: -19px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.how__description {
+  @include font-size(15px, 140%);
+  opacity: 0.5;
+
+  padding-left: 12px;
+  margin-top: 43px;
+  border-left: 4px solid $yellow;
+}
+
+@media (max-width: $tablet-width) {
+  .how {
+    background-image: url(../img/stamp.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  .how__image {
+    display: none;
+  }
+
+  .how__inner {
+    padding-right: 0;
+  }
+}

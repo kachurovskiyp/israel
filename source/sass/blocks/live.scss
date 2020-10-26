@@ -1,0 +1,125 @@
+.live {
+  min-height: 850px;
+  margin-bottom: 96px;
+
+  background-image:
+    url(../img/live.png),
+    url(../img/watch.png);
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+
+  background-position:
+    0 0,
+    right 600px;
+}
+
+.live__title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.live__text {
+  text-align: left;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.live__gallery {
+  @include clear-list;
+  margin-left: 100px;
+  padding-top: 48px;
+}
+
+.live__gallery-item {
+  display: inline-block;
+  position: relative;
+  margin-right: 24px;
+  margin-bottom: 21px;
+
+
+  &:first-child {
+    float: left;
+    margin-right: 15px;
+  }
+
+  &:first-child img {
+    margin-top: -67px;
+    margin-left: 4px;
+  }
+}
+
+.live__gallery-item p {
+  @include raleway-font(21px, 25px);
+  color: $white;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+
+  position: absolute;
+  bottom: 21px;
+  left: 32px;;
+
+  max-width: 360px;
+}
+
+.live__gallery-item:first-child p {
+  bottom: 21px;
+  left: 44px;
+  letter-spacing: -0.01em;
+}
+
+.live__gallery-item--vertical p {
+  bottom: 20px;
+  left: 24px;
+}
+
+@media (min-resolution: $retina-dpi) and (min-resolution: $retina-dppx) {
+  .live {
+    background-image:
+      url(../img/live@2x.png),
+      url(../img/watch@2x.png);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .live {
+    background: unset;
+  }
+
+  .live__gallery {
+    margin: 0;
+    width: 100%;
+  }
+
+  .live__gallery-item {
+    display: block;
+    position: relative;
+    margin: 0;
+    width: 100%;
+
+    &--active {
+      display: block;
+    }
+
+    &--disable {
+      display: none;
+    }
+
+
+    &:first-child {
+      float: unset;
+      margin-right: 0;
+    }
+
+    &:first-child img {
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+
+  .live__gallery-item img {
+    width: 100%;
+    height: auto;
+  }
+
+}

@@ -1,0 +1,102 @@
+.review {
+  margin-top: -82px;
+  margin-bottom: 55px;
+
+  background-image:
+    url(../img/review_bg.png),
+    url(../img/sketch.png);
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+
+  background-position:
+    0 0,
+    0 0;
+}
+
+.review__title {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.review__slider {
+  @include clear-list;
+  margin-left: 98px;
+}
+
+.review__slide {
+  display: flex;
+}
+
+.review__description {
+  margin-left: 40px;
+  padding-top: 18px;
+}
+
+.review__name {
+  @include font-size(24px, 150%);
+  opacity: 0.74;
+  margin-bottom: 10px;
+}
+
+.rewiev__program {
+  @include font-size(15px, 140%);
+  opacity: 0.74;
+
+  margin-top: 0;
+  margin-bottom: 39px;
+}
+
+.rewiev__program span {
+  color: $blue;
+  margin-right: 5px;
+}
+
+.review__text {
+  max-width: 680px;
+  opacity: 0.74;
+}
+
+.review__link {
+  color: $blue;
+}
+
+.review__footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 38px;
+}
+
+.review__slider-numbers {
+  opacity: 0.5;
+  margin-right: 20px;
+}
+
+.review__slider-control {
+  display: flex;
+  align-items: center;
+}
+
+.review__social {
+  @include clear-list;
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.review__social li {
+  margin-left: 23px;
+}
+
+.review__prew,
+.review__next {
+  display: block;
+  width: 10px;
+  height: 18px;
+  margin-right: 10px;
+
+  border: none;
+  background-color: transparent;
+}

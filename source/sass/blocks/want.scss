@@ -1,0 +1,72 @@
+.want {
+  padding-top: 178px;
+  padding-left: 210px;
+  min-height: 538px;
+
+  background-image:
+    url(../img/girl-flag-bg.png),
+    url(../img/backpack.png);
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+
+  background-position:
+    right top,
+    0 26%;
+}
+
+.want__title {
+  margin-bottom: 25px;
+}
+
+.want__text {
+  max-width: 400px;
+  margin-bottom: 65px;
+  opacity: 0.87;
+}
+
+.want__form {
+  position: relative;
+  max-width: 480px;
+}
+
+.want__input {
+  width: 100%;
+}
+
+.want__button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 215px;
+}
+
+@media (min-resolution: $retina-dpi) and (min-resolution: $retina-dppx) {
+  .want {
+    background-image:
+    url(../img/girl-flag-bg@2x.png),
+    url(../img/backpack@2x.png);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .want {
+    padding: 0;
+    min-height: 600px;
+
+    background-image:
+      url(../img/girl-flag-bg-mobile.png),
+      url(../img/backpack-mobile.png);
+
+    background-position:
+      center bottom,
+      0 26%;
+  }
+
+  .want__button {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,95 @@
+.questions {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 110px;
+  padding-bottom: 80px;
+  margin-bottom: 127px;
+
+  background-image:
+    url(../img/questions__bg.png),
+    url(../img/bag.png);
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+
+  background-position:
+    0 0,
+    left 102%;
+}
+
+.questions__image {
+  margin-top: 35px;
+}
+
+.questions__inner {
+  width: 49%;
+  margin-right: 30px;
+}
+
+.questions__title {
+  margin-bottom: 8px;
+}
+
+.questions__list {
+  @include clear-list;
+  counter-reset: item;
+}
+
+.questions__item {
+  max-width: 560px;
+  padding-bottom: 37px;
+  padding-top: 35px;
+
+  border-bottom: 1px solid rgba(72, 72, 72, 0.2);
+}
+
+.questions__item label {
+  @include font-size(17px, 150%);
+
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+
+  width: 100%;
+  padding-left: 30px;
+
+  &::before {
+    @include font-size(28px, 170%);
+    font-weight: 700;
+    color: $yellow;
+
+    counter-increment: item;
+    content: counter(item);
+
+    position: absolute;
+    top: -13px;
+    left: -1px;
+    margin-right: 10px;
+  }
+}
+
+.questions__arrow {
+  position: absolute;
+  top: 20px;
+  right: 36px;
+}
+
+.questions__description {
+  @include font-size(15px, 140%);
+  opacity: 0.74;
+  display: none;
+  max-width: 480px;
+}
+
+.questions__item input:checked ~ .questions__description {
+  display: block;
+}
+
+.questions__item input:checked ~ label {
+  border-bottom: none;
+}
+
+.questions__item input:checked ~ label .questions__arrow {
+  transform: rotate(180deg);
+}

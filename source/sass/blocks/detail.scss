@@ -1,0 +1,141 @@
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 110px;
+  margin-bottom: 56px;
+}
+
+.detail__title {
+  margin-bottom: 48px;
+}
+
+.detail__city {
+  @include font-size(15px, 150%);
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 39px;
+}
+
+.detail__city-marker {
+  margin-right: 3px;
+  opacity: 0.5;
+}
+
+.detail__city span {
+  margin-left: 19px;
+  margin-right: 10px;
+  border-bottom: 1px dashed $blue;
+}
+
+.detail__city-cursor {
+  fill: $blue;
+}
+
+.detail__description {
+  width: 42%;
+}
+
+.detail__curator {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail__curator img {
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+.detail__curator-desc {
+  width: 50%;
+}
+
+.detail__curator-desc address {
+  @include font-size(13px, 150%);
+  font-style: normal;
+  opacity: 0.74;
+  margin-bottom: 15px;
+}
+
+.detail__curator-name {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.detail__curator-name span {
+  @include font-size(15px, 150%);
+  color: $blue;
+  letter-spacing: -0.02em;
+
+  opacity: 0.74;
+  margin-right: 10px;
+}
+
+.detail__social {
+  @include clear-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail__social li {
+  margin-right: 21px;
+  opacity: 0.5;
+}
+
+.detail__feedback {
+  flex-basis: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.detail__text {
+  margin-top: 28px;
+  max-width: 490px;
+}
+
+.detail__map-link {
+  margin-top: 39px;
+  margin-left: 26px;
+}
+
+.detail__feedback {
+  margin-top: 42px;
+}
+
+.detail__feedback-wrap {
+  margin-right: 18px;
+}
+
+.detail__feedback-text {
+  margin-bottom: 9px;
+  max-width: 360px;
+}
+
+.detail__feedback-notice {
+  @include font-size(13px, 150%);
+  opacity: 0.5;
+  margin-top: 0px;
+  max-width: 360px;
+}
+
+.detail__feedback input {
+  margin-top: 15px;
+  width: 250px;
+  margin-right: 23px;
+
+  &::placeholder {
+    @include font-size(17px, 20px);
+    text-transform: uppercase;
+    font-variant: small-caps;
+  }
+}
+
+.detail__feedback button {
+  @include font-size(17px, 20px);
+  font-weight: 500;
+  font-variant: small-caps;
+  margin-top: 15px;
+  width: 218px;
+}

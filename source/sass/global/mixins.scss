@@ -9,10 +9,17 @@
   line-height: $line;
 }
 
-
 @mixin monserat-font($size, $line) {
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin raleway-font($size, $line) {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
   font-size: $size;
   line-height: $line;
 }
