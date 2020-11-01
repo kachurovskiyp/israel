@@ -100,3 +100,67 @@
   border: none;
   background-color: transparent;
 }
+
+@media (max-width: $tablet-width) {
+  .review {
+    margin-bottom: 73px;
+  }
+
+  .review__slider {
+    position: relative;
+    margin: 0;
+  }
+
+  .review__slide {
+    display: block;
+  }
+
+  .review__slide-img {
+    width: 78%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 19px;
+    display: block;
+  }
+
+  .review__slider-control {
+    position: absolute;
+    top: 319px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .review__description {
+    margin-left: 15px;
+  }
+
+  .review__name {
+    margin-top: 35px;
+  }
+
+  .rewiev__program {
+    @include font-size(14px, 160%);
+    margin-bottom: 20px;
+  }
+
+  .rewiev__program span {
+    @include font-size(14px, 160%);
+    display: block;
+  }
+
+  .review__text {
+    @include font-size(16px, 160%);
+    padding-right: 20px;
+    margin-bottom: 25px;
+  }
+
+  .review__link {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .review__social {
+    margin-top: -17px;
+    margin-left: -21px;
+  }
+}

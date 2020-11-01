@@ -20,6 +20,10 @@
   margin-bottom: 25px;
 }
 
+.live br {
+  display: none;
+}
+
 .live__text {
   text-align: left;
   max-width: 720px;
@@ -84,11 +88,24 @@
 @media (max-width: $tablet-width) {
   .live {
     background: unset;
+    margin-bottom: 0;
+  }
+
+  .live br {
+    display: inline;
+  }
+
+  .live__text {
+    @include font-size(16px, 160%);
+    max-width: unset;
+    padding-left: 17px;
+    padding-right: 28px;
   }
 
   .live__gallery {
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 28px;
   }
 
   .live__gallery-item {
@@ -115,6 +132,19 @@
       margin-top: 0;
       margin-left: 0;
     }
+  }
+
+  .live__gallery-item p {
+    @include font-size(18px, 21px);
+    text-align: center;
+    left: 21px;
+    width: 90%;
+  }
+
+  .live__gallery-item:first-child p {
+    bottom: 12px;
+    left: 17px;
+    width: 88%;
   }
 
   .live__gallery-item img {

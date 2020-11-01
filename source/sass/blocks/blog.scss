@@ -49,13 +49,41 @@
 }
 
 @media (max-width: $tablet-width) {
+  .blog {
+    margin-top: -63px;
+    min-height: 400px;
+    margin-bottom: 70px;
+  }
+
   .blog__image {
     width: 100%;
     height: auto;
+    left: 0;
+    top: 45px;
   }
 
   .blog__inner {
     margin: 0;
     padding: 0;
+  }
+
+  .blog__title {
+    @include font-size(40px, 49px);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 95px;
+  }
+
+  .blog__text {
+    @include font-size(16px, 160%);
+    margin-left: 20px;
+    margin-right: 24px;
+  }
+
+  .blog__link {
+    max-width: unset;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 63px;
   }
 }

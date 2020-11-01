@@ -1,5 +1,9 @@
 .call {
   display: none;
+
+  &--open {
+    display: block;
+  }
 }
 
 .call form {

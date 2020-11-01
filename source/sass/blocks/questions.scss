@@ -93,3 +93,63 @@
 .questions__item input:checked ~ label .questions__arrow {
   transform: rotate(180deg);
 }
+
+@media (max-width: $tablet-width) {
+  .questions {
+    display: block;
+    padding-left: 0;
+    padding-bottom: 20px;
+
+    background-image: url(../img/bag.png);
+    background-repeat: no-repeat;
+    background-position: left 81%;
+  }
+
+  .questions__image {
+    display: none;
+  }
+
+  .questions__title {
+    text-align: center;
+  }
+
+  .questions__inner {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .questions__list {
+    margin-left: 10px;
+    margin-top: 39px;
+  }
+
+  .questions__item {
+    position: relative;
+    padding: 40px 40px 17px 0;
+    margin: 0;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  .questions__item label {
+    @include font-size(16px, 160%);
+
+    &::before {
+      left: 6px;
+    }
+
+    & svg {
+      position: absolute;
+      top: 9px;
+      right: -25px;
+    }
+  }
+
+  .questions__description {
+    @include font-size(14px, 160%);
+    padding-left: 6px;
+    margin-top: 22px;
+  }
+}

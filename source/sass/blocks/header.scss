@@ -41,6 +41,11 @@
   border: none;
   border-bottom: 2px dashed $black;
   background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $blue;
+  }
 }
 
 .header__text {
@@ -68,16 +73,19 @@
 
 @media (max-width: $tablet-width) {
   .header {
-    min-height: 600px;
+    min-height: 500px;
+    margin: 0;
+
     background-image: url("../img/header-bg-mobile.png");
-    background-size: contain;
+    background-size: cover;
+    background-position: -1px 32px;
   }
 
   .header__wrapper {
     position: relative;
     display: block;
 
-    margin-bottom: 225px;
+    margin-bottom: 245px;
     padding: 20px 7px 16px 20px;
   }
 

@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Израиль</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/FiraSans-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/FiraSans-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font">
 </head>
 <body>
 
@@ -129,7 +132,7 @@
     <p class="want__text">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
     <form class="want__form" action="index.html">
       <label for="want-tel" class="visually-hidden">Введите ваш номер телефона</label>
-      <input class="want__input input" type="text" id="want-tel" placeholder="телефон">
+      <input class="want__input input" type="text" id="want-tel" placeholder="телефон" required>
       <button class="want__button button" type="submit">перезвоните мне</button>
     </form>
   </section>
@@ -152,19 +155,19 @@
       <p class="how__text">Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
       <h3 class="how__condition">Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</h3>
       <ul class="how__list">
-        <li class="how__item">Быть в возрасте от 16 до 30 лет</li>
-        <li class="how__item">Иметь оконченное среднее образование</li>
-        <li class="how__item">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
-        <li class="how__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
+        <li class="how__item"><span>Быть в возрасте от 16 до 30 лет</span></li>
+        <li class="how__item"><span>Иметь оконченное среднее образование</span></li>
+        <li class="how__item"><span>Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</span></li>
+        <li class="how__item"><span>За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</span></li>
       </ul>
       <p class="how__description">Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.</p>
     </div>
   </section>
 
   <section class="live">
-    <h2 class="live__title title">Жизнь в израиле</h2>
+    <h2 class="live__title title">Жизнь<br> в израиле</h2>
     <p class="live__text">Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
-    <ul class="live__gallery">
+    <ul class="live__gallery gallery">
       <li class="live__gallery-item live__gallery-item--active">
         <picture>
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/1img@2x.png" type="image/png">
@@ -359,7 +362,21 @@
     <h2 class="review__title title">Отзывы</h2>
     <ul class="review__slider">
       <li class="review__slide">
-        <img src="img/review.png" width="364" height="480" alt="Ольга Михайлова">
+        <picture>
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
+          <!-- 1x: 364px, 2x: 728px -->
+          <img
+            class="review__slide-img"
+            srcset="img/review-mobile.png 270w"
+            sizes="(max-width: 767px) 300px"
+
+            width="364"
+            height="480"
+            src="img/review.png"
+            alt="Ольга Михайлова"
+          >
+        </picture>
         <div class="review__description">
           <h3 class="review__name">Ольга Михайлова</h3>
           <p class="rewiev__program"><span>Программа:</span> Арт-Тель, февраль-сетнябрь 2017</p>
@@ -452,11 +469,24 @@
             </li>
           </ul>
         </div>
-        <p class="detail__text">Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою!</p>
+        <p class="detail__text">Куратор является опытным специалистом агентства Сохнут<br> и знает о проекте «Маса» всё! Свяжитесь с куратором,<br> узнайте подробнее о программах и выберите свою!</p>
       </div>
     </div>
     <a href="#" class="detail__map-link">
-      <img src="img/detail-map.png" width="702" height="448" alt="Новосибирск, ул. Щетинкина 68">
+      <picture>
+        <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/detail-map@2x.png" type="image/png">
+        <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/detail-map-mobile@2x.png" type="image/png">
+        <!-- 1x: 364px, 2x: 728px -->
+        <img
+          srcset="img/detail-map-mobile.png 270w"
+          sizes="(max-width: 767px) 300px"
+
+          width="702"
+          height="448"
+          src="img/detail-map.png"
+          alt="Новосибирск, ул. Щетинкина 68"
+        >
+      </picture>
     </a>
     <form class="detail__feedback">
       <div class="detail__feedback-wrap">
@@ -464,10 +494,10 @@
         <p class="detail__feedback-notice">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
       </div>
       <label for="feedback-name" class="visually-hidden">Введите ваше имя</label>
-      <input class="feedback__name input" type="text" name="name" id="feeback-name" placeholder="Имя">
+      <input class="feedback__name input" type="text" name="name" id="feedback-name" placeholder="Имя" required>
 
       <label for="feedback-tel" class="visually-hidden">Введите ваш номер телефона</label>
-      <input class="feedback__tel input" type="text" name="tel" id="feedback-tel" placeholder="+7 (923) 41">
+      <input class="feedback__tel input" type="text" name="tel" id="feedback-tel" placeholder="+7 (923) 41" required>
 
       <button type="submit" class="feedback__submit button">перезвоните мне</button>
     </form>
@@ -540,7 +570,7 @@
   </section>
 
   <script src="js/main.js"></script>
-  <script src="js/picturefill.js"></script>
+  <script src="js/vendor.js"></script>
 </body>
 </html>
 

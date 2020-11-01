@@ -58,7 +58,9 @@
   max-width: 409px;
 
   position: relative;
+}
 
+.how__item span {
   &::before {
     @include font-size(17px, 36px);
     font-weight: 700;
@@ -95,6 +97,13 @@
     background-image: url(../img/stamp.png);
     background-repeat: no-repeat;
     background-position: right center;
+
+    padding: unset;
+    margin-bottom: 64px;
+  }
+  .how__title {
+    text-align: center;
+    margin-bottom: 27px;
   }
 
   .how__image {
@@ -102,6 +111,49 @@
   }
 
   .how__inner {
-    padding-right: 0;
+    padding: 0;
+  }
+
+  .how__text {
+    @include font-size(14px, 160%);
+    padding: 0 16px;
+  }
+
+  .how__condition {
+    @include font-size(16px, 160%);
+    margin-top: 24px;
+    padding: 0 16px;
+  }
+
+  .how__list {
+    margin-left: 25px;
+    margin-right: 18px;
+  }
+
+  .how__item {
+    @include font-size(14px, 160%);
+    min-height: 58px;
+    padding-left: 32px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .how__item span {
+    position: relative;
+
+    &::before {
+      top: 50%;
+      left: -50px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .how__description {
+    @include font-size(14px, 160%);
+    margin-top: 22px;
+    padding-left: 20px;
+    padding-right: 10px;
   }
 }

@@ -1,5 +1,9 @@
 .accepted {
   display: none;
+
+  &--open {
+    display: block;
+  }
 }
 
 .accepted__inner svg {

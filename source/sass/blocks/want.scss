@@ -52,6 +52,7 @@
 
 @media (max-width: $tablet-width) {
   .want {
+    margin-bottom: 50px;
     padding: 0;
     min-height: 600px;
 
@@ -64,9 +65,31 @@
       0 26%;
   }
 
+  .want__title {
+    text-align: center;
+  }
+
+  .want__text {
+    @include font-size(16px, 160%);
+    padding: 0 15px;
+    margin-bottom: 25px;
+  }
+
+  .want__form {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .want__input::placeholder {
+    @include font-size(17px, 20px);
+    font-variant: small-caps;
+  }
+
   .want__button {
     position: static;
+    margin: 0 auto;
     margin-top: 10px;
-    width: 100%;
+    display: block;
+    width: 94%;
   }
 }
