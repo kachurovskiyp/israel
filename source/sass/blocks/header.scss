@@ -5,7 +5,7 @@
 
   background-image: url(../img/header-bg.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 107%;
 }
 
 .header__wrapper {
@@ -77,8 +77,8 @@
     margin: 0;
 
     background-image: url("../img/header-bg-mobile.png");
-    background-size: cover;
     background-position: -1px 32px;
+    background-size: 100% 97%;
   }
 
   .header__wrapper {
