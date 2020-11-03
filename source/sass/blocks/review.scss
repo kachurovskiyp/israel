@@ -21,12 +21,28 @@
 }
 
 .review__slider {
+  position: relative;
   @include clear-list;
   margin-left: 98px;
 }
 
 .review__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
   display: flex;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+
+  &--active {
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+  }
 }
 
 .review__description {
@@ -77,6 +93,11 @@
 .review__slider-control {
   display: flex;
   align-items: center;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
 }
 
 .review__social {
@@ -94,7 +115,7 @@
 .review__next {
   display: block;
   width: 10px;
-  height: 18px;
+  height: 24px;
   margin-right: 10px;
 
   border: none;

@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Израиль</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/FiraSans-Bold.woff2" as="font">
+  <!-- <link rel="preload" href="fonts/FiraSans-Bold.woff2" as="font">
   <link rel="preload" href="fonts/FiraSans-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font">
+  <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font"> -->
 </head>
 <body>
 
@@ -53,8 +53,8 @@
         <img
           class="about__photo"
 
-          sizes="(max-width: 767px) 300w"
-          srcset="img/about-photo-mobile.png 320px"
+          sizes="(max-width: 767px) 300px"
+          srcset="img/about-photo-mobile.png 320w"
           src="img/about-photo.png"
 
           width="870"
@@ -178,8 +178,8 @@
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/1img-mobile@2x.png" type="image/png">
           <!-- 1x: 482px, 2x: 964px -->
           <img
-            srcset="img/1img-mobile.png 320px"
-            sizes="(max-width: 767px) 270w"
+            srcset="img/1img-mobile.png 320w"
+            sizes="(max-width: 767px) 270px"
 
             width="482"
             height="732"
@@ -196,8 +196,8 @@
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/2img-mobile@2x.png" type="image/png">
           <!-- 1x: 211px, 2x: 422px -->
           <img
-            srcset="img/2img-mobile.png 320px"
-            sizes="(max-width: 767px) 270w"
+            srcset="img/2img-mobile.png 320w"
+            sizes="(max-width: 767px) 270px"
 
             width="211"
             height="318"
@@ -214,8 +214,8 @@
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/3img-mobile@2x.png" type="image/png">
           <!-- 1x: 411px, 2x: 822px -->
           <img
-            srcset="img/3img-mobile.png 300px"
-            sizes="(max-width: 767px) 270w"
+            srcset="img/3img-mobile.png 300w"
+            sizes="(max-width: 767px) 270px"
 
             width="411"
             height="318"
@@ -232,8 +232,8 @@
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/4img-mobile@2x.png" type="image/png">
           <!-- 1x: 411px, 2x: 822px -->
           <img
-            srcset="img/4img-mobile.png 300px"
-            sizes="(max-width: 767px) 270w"
+            srcset="img/4img-mobile.png 300w"
+            sizes="(max-width: 767px) 270px"
 
             width="411"
             height="318"
@@ -250,8 +250,8 @@
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/5img-mobile@2x.png" type="image/png">
           <!-- 1x: 211px, 2x: 422px -->
           <img
-            srcset="img/5img-mobile.png 300px"
-            sizes="(max-width: 767px) 270w"
+            srcset="img/5img-mobile.png 300w"
+            sizes="(max-width: 767px) 270px"
 
             width="211"
             height="318"
@@ -272,8 +272,8 @@
       <img
         class="blog__image"
 
-        srcset="img/blog-mobile.png 300px"
-        sizes="(max-width: 767px) 270w"
+        srcset="img/blog-mobile.png 300w"
+        sizes="(max-width: 767px) 270px"
 
         width="1340"
         height="561"
@@ -365,15 +365,15 @@
   <section class="review">
     <h2 class="review__title title">Отзывы</h2>
     <ul class="review__slider">
-      <li class="review__slide">
+      <li class="review__slide review__slide--active">
         <picture>
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
           <!-- 1x: 364px, 2x: 728px -->
           <img
             class="review__slide-img"
-            srcset="img/review-mobile.png 320px"
-            sizes="(max-width: 767px) 270w"
+            srcset="img/review-mobile.png 320w"
+            sizes="(max-width: 767px) 270px"
 
             width="364"
             height="480"
@@ -388,21 +388,6 @@
           <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
           <a href="#" class="review__link">Читать подробнее</a>
           <div class="review__footer">
-            <div class="review__slider-control">
-              <p class="review__slider-numbers"><span class="review__current-slide">3</span> / <span class="review__number-slides">6</span></p>
-              <button type="button" class="review__prew">
-                <span class="visually-hidden">Предидущий слайд</span>
-                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.2" d="M10 1.5L2 9L10 16.5" stroke="#484848" stroke-width="2"/>
-                </svg>
-              </button>
-              <button type="button" class="review__next">
-                <span class="visually-hidden">Следующий слайд</span>
-                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.2" d="M1 16.5L9 9L0.999999 1.5" stroke="#484848" stroke-width="2"/>
-                </svg>
-              </button>
-            </div>
             <ul class="review__social">
               <li>
                 <a href="#">
@@ -429,6 +414,168 @@
           </div>
         </div>
       </li>
+      <li class="review__slide">
+        <picture>
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
+          <!-- 1x: 364px, 2x: 728px -->
+          <img
+            class="review__slide-img"
+            srcset="img/review-mobile.png 320w"
+            sizes="(max-width: 767px) 270px"
+
+            width="364"
+            height="480"
+            src="img/review.png"
+            alt="Ольга Михайлова"
+          >
+        </picture>
+        <div class="review__description">
+          <h3 class="review__name">Вера Котельникова</h3>
+          <p class="review__program"><span>Программа:</span> Арт-Тель, январь-сетнябрь 2018</p>
+          <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+          <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+          <a href="#" class="review__link">Читать подробнее</a>
+          <div class="review__footer">
+            <ul class="review__social">
+              <li>
+                <a href="#">
+                  <svg width="10" height="20">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="22" height="18">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="20" height="20">
+                    <use xlink:href="#icon-insta"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="review__slide">
+        <picture>
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
+          <!-- 1x: 364px, 2x: 728px -->
+          <img
+            class="review__slide-img"
+            srcset="img/review-mobile.png 320w"
+            sizes="(max-width: 767px) 270px"
+
+            width="364"
+            height="480"
+            src="img/review.png"
+            alt="Ольга Михайлова"
+          >
+        </picture>
+        <div class="review__description">
+          <h3 class="review__name">Оксана Иванова</h3>
+          <p class="review__program"><span>Программа:</span> Арт-Тель, январь-сетнябрь 2018</p>
+          <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+          <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+          <a href="#" class="review__link">Читать подробнее</a>
+          <div class="review__footer">
+            <ul class="review__social">
+              <li>
+                <a href="#">
+                  <svg width="10" height="20">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="22" height="18">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="20" height="20">
+                    <use xlink:href="#icon-insta"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="review__slide">
+        <picture>
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
+          <!-- 1x: 364px, 2x: 728px -->
+          <img
+            class="review__slide-img"
+            srcset="img/review-mobile.png 320w"
+            sizes="(max-width: 767px) 270px"
+
+            width="364"
+            height="480"
+            src="img/review.png"
+            alt="Ольга Михайлова"
+          >
+        </picture>
+        <div class="review__description">
+          <h3 class="review__name">Виктория Перкова</h3>
+          <p class="review__program"><span>Программа:</span> Арт-Тель, январь-сетнябрь 2018</p>
+          <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+          <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+          <a href="#" class="review__link">Читать подробнее</a>
+          <div class="review__footer">
+            <ul class="review__social">
+              <li>
+                <a href="#">
+                  <svg width="10" height="20">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="22" height="18">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="20" height="20">
+                    <use xlink:href="#icon-insta"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <div class="review__slider-control">
+        <p class="review__slider-numbers"><span class="review__current-slide">3</span> / <span class="review__number-slides">6</span></p>
+        <button type="button" class="review__prew">
+          <span class="visually-hidden">Предидущий слайд</span>
+          <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.2" d="M10 1.5L2 9L10 16.5" stroke="#484848" stroke-width="2"/>
+          </svg>
+        </button>
+        <button type="button" class="review__next">
+          <span class="visually-hidden">Следующий слайд</span>
+          <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.2" d="M1 16.5L9 9L0.999999 1.5" stroke="#484848" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
     </ul>
   </section>
 
@@ -482,8 +629,8 @@
         <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/detail-map-mobile@2x.png" type="image/png">
         <!-- 1x: 364px, 2x: 728px -->
         <img
-          srcset="img/detail-map-mobile.png 320px"
-          sizes="(max-width: 767px) 270w"
+          srcset="img/detail-map-mobile.png 320w"
+          sizes="(max-width: 767px) 270px"
 
           width="702"
           height="448"
