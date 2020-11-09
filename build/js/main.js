@@ -72,16 +72,17 @@
 
   const slider = document.querySelector('.review__slider');
   const slides = slider.querySelectorAll('.review__slide');
+  const reviewSection = document.querySelector('.review');
 
-  const slidesNumberSpan = slider.querySelector('.review__number-slides');
+  const slidesNumberSpan = reviewSection.querySelector('.review__number-slides');
   slidesNumberSpan.innerHTML = slides.length;
 
   let currentSlide = 0;
-  const currentSlideSpan = slider.querySelector('.review__current-slide');
+  const currentSlideSpan = reviewSection.querySelector('.review__current-slide');
   currentSlideSpan.innerHTML = currentSlide + 1;
 
-  const nextButton = slider.querySelector('.review__next');
-  const prewButton = slider.querySelector('.review__prew');
+  const nextButton = reviewSection.querySelector('.review__next');
+  const prewButton = reviewSection.querySelector('.review__prew');
 
   const changeSlide = (currentSlide) => {
     slides.forEach((slide) => {

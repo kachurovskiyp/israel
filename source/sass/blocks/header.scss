@@ -5,7 +5,7 @@
 
   background-image: url(../img/header-bg.png);
   background-repeat: no-repeat;
-  background-size: 100% 107%;
+  background-size: 100% auto;
 }
 
 .header__wrapper {
@@ -15,7 +15,7 @@
   justify-content: space-between;
 
   padding: 28px 110px;
-  margin-bottom: 424px;
+  margin-bottom: 31%;
 }
 
 .header__tel {

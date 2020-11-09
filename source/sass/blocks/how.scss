@@ -1,5 +1,6 @@
 .how {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 40px;
   padding-left: 12px;
   margin-bottom: 152px;
@@ -17,11 +18,8 @@
 }
 
 .how__inner {
-  padding-right: 140px;
-}
-
-.how__image {
-  margin-right: 106px;
+  width: 39%;
+  margin-left: 8%;
 }
 
 .how__title {

@@ -24,10 +24,17 @@
 }
 
 .about__video {
-  width: 900px;
+  width: 65%;
   margin: 0 auto;
+  position: relative;
+  padding-right: 29px;
 
   position: relative;
+}
+
+.about__video img {
+  width: 100%;
+  height: auto;
 }
 
 .about__play {

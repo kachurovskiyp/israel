@@ -1,7 +1,6 @@
 .detail {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 110px;
   margin-bottom: 56px;
 }
 
@@ -87,7 +86,9 @@
 .detail__feedback {
   flex-basis: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
+  margin-top: 42px;
 }
 
 .detail__text {
@@ -102,10 +103,6 @@
 .detail__map-link {
   margin-top: 41px;
   margin-left: 25px;
-}
-
-.detail__feedback {
-  margin-top: 42px;
 }
 
 .detail__feedback-wrap {
