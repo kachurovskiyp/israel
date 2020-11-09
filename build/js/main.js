@@ -72,7 +72,7 @@
 
   const slider = document.querySelector('.review__slider');
   const slides = slider.querySelectorAll('.review__slide');
-  
+
   const slidesNumberSpan = slider.querySelector('.review__number-slides');
   slidesNumberSpan.innerHTML = slides.length;
 
@@ -101,10 +101,10 @@
   }
 
   const getPrewSlide = () => {
-    
+
     if(currentSlide === 0) {
       currentSlide = slides.length;
-    } 
+    }
     currentSlide--;
     changeSlide(currentSlide);
   }
@@ -112,20 +112,60 @@
   nextButton.addEventListener('click', getNextSlide);
   prewButton.addEventListener('click', getPrewSlide);
 
-  /* slider */
+  /* programs change */
+
+  const programs = document.querySelector('.programs');
+  const programsButtonItems = programs.querySelectorAll('.programs__item');
+  const programsDescs = programs.querySelectorAll('.programs__description');
+
+  const resetButtons = () => {
+    programsButtonItems.forEach((item) => {
+      item.classList.remove('programs__item--active');
+    });
+  }
+
+  const resetDescs = () => {
+    programsDescs.forEach((item) => {
+      item.classList.remove('programs__description--active');
+    })
+  }
+
+  const changeDesc = (evt) => {
+    const targetClass = `programs__description--${evt.target.value}`;
+    const activeClass = 'programs__description--active';
+    resetButtons();
+    resetDescs();
+
+    evt.target.parentNode.classList.add('programs__item--active');
+    programsDescs.forEach((item => {
+      if (item.classList.contains(targetClass)) {
+        item.classList.add(activeClass);
+      }
+    }));
+  }
+
+  programsButtonItems.forEach((item) => {
+    item.querySelector('button').addEventListener('click', changeDesc);
+  })
+
+  /* live slider */
+
   const tabletWidth = 767;
 
-  if(window.innerWidth < tabletWidth) {
-    const gallery = document.querySelector('.gallery');
+  const activeSlider = () => {
+    if(window.innerWidth < tabletWidth) {
+      const gallery = document.querySelector('.live__gallery');
+      const slides = gallery.querySelectorAll('li');
 
-    const slides = gallery.querySelectorAll('li');
+      slides.forEach( (slide) => {
+        slide.classList.add('live__gallery-item--disable');
+      });
 
-    slides.forEach( (slide) => {
-      slide.classList.add('live__gallery-item--disable');
-    });
-
-    slides[0].classList.remove('live__gallery-item--disable');
-
+      slides[0].classList.remove('live__gallery-item--disable');
+    }
   }
+
+  window.addEventListener('resize', activeSlider);
+
 })();
 

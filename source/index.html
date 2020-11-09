@@ -42,19 +42,20 @@
     <h2 class="about__title title">О программе</h2>
     <p class="about__text">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.<br> В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
 
-    <div class="about__video"> 
-
-      <!-- Не подгружается мобильное изображение  srcset="img/about-photo-mobile.png 320px" -->
-
+    <div class="about__video">
       <picture>
+        <source media="(min-width: 768px)" srcset="img/about-photo.webp" type="image/webp">
+        <source media="(max-width: 767px)" srcset="img/about-photo-mobile.webp" type="image/webp">
+        <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/about-photo@2x.webp" type="image/webp">
         <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/about-photo@2x.png" type="image/png">
+        <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/about-photo-mobile@2x.webp" type="image/webp">
         <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/about-photo-mobile@2x.png" type="image/png">
         <!-- 1x: 870px, 2x: 1740px -->
         <img
           class="about__photo"
 
-          sizes="(max-width: 767px) 300px"
-          srcset="img/about-photo-mobile.png 320w"
+          sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+          srcset="img/about-photo.png 870w, img/about-photo-mobile.png 320w"
           src="img/about-photo.png"
 
           width="870"
@@ -108,7 +109,7 @@
         <p class="programs__text">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
         <p class="programs__text">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
       </div>
-      <div class="programs__description programs__description--academic">
+      <div class="programs__description programs__description--academic programs__description--active">
         <h3 class="programs__sub-title">Академические</h3>
         <p class="programs__text">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
         <p class="programs__text">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
@@ -143,6 +144,8 @@
 
   <section class="how">
     <picture>
+      <source media="(min-width: 768px)" srcset="img/how.webp" type="image/webp">
+      <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/how@2x.webp" type="image/webp">
       <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/how@2x.png" type="image/png">
       <!-- 1x: 581px, 2x: 1162px -->
       <img
@@ -174,12 +177,16 @@
     <ul class="live__gallery gallery">
       <li class="live__gallery-item live__gallery-item--active">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/1img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/1img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/1img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/1img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/1img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/1img-mobile@2x.png" type="image/png">
           <!-- 1x: 482px, 2x: 964px -->
           <img
-            srcset="img/1img-mobile.png 320w"
-            sizes="(max-width: 767px) 270px"
+            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+            srcset="img/1img.png 482w, img/1img-mobile.png 288w"
 
             width="482"
             height="732"
@@ -192,12 +199,16 @@
 
       <li class="live__gallery-item live__gallery-item--vertical">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/2img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/2img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/2img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/2img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/2img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/2img-mobile@2x.png" type="image/png">
           <!-- 1x: 211px, 2x: 422px -->
           <img
-            srcset="img/2img-mobile.png 320w"
-            sizes="(max-width: 767px) 270px"
+            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+            srcset="img/2img.png 211w, img/2img-mobile.png 288w"
 
             width="211"
             height="318"
@@ -210,12 +221,16 @@
 
       <li class="live__gallery-item">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/3img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/3img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/3img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/3img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/3img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/3img-mobile@2x.png" type="image/png">
           <!-- 1x: 411px, 2x: 822px -->
           <img
-            srcset="img/3img-mobile.png 300w"
-            sizes="(max-width: 767px) 270px"
+            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+            srcset="img/3img.png 211w, img/3img-mobile.png 288w"
 
             width="411"
             height="318"
@@ -228,12 +243,16 @@
 
       <li class="live__gallery-item">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/4img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/4img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/4img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/4img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/4img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/4img-mobile@2x.png" type="image/png">
           <!-- 1x: 411px, 2x: 822px -->
           <img
-            srcset="img/4img-mobile.png 300w"
-            sizes="(max-width: 767px) 270px"
+            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+            srcset="img/4img.png 411w, img/4img-mobile.png 288w"
 
             width="411"
             height="318"
@@ -246,12 +265,16 @@
 
       <li class="live__gallery-item live__gallery-item--vertical">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/5img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/5img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/5img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/5img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/5img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/5img-mobile@2x.png" type="image/png">
           <!-- 1x: 211px, 2x: 422px -->
           <img
-            srcset="img/5img-mobile.png 300w"
-            sizes="(max-width: 767px) 270px"
+            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+            srcset="img/5img.png 211w, img/5img-mobile.png 288w"
 
             width="211"
             height="318"
@@ -266,14 +289,18 @@
 
   <section class="blog">
     <picture>
+      <source media="(min-width: 768px)" srcset="img/blog.webp" type="image/webp">
+      <source media="(max-width: 767px)" srcset="img/blog-mobile.webp" type="image/webp">
+      <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/blog@2x.webp" type="image/webp">
       <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/blog@2x.png" type="image/png">
+      <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/blog-mobile@2x.webp" type="image/webp">
       <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/blog-mobile@2x.png" type="image/png">
       <!-- 1x: 1340px, 2x: 2680px -->
       <img
         class="blog__image"
 
-        srcset="img/blog-mobile.png 300w"
-        sizes="(max-width: 767px) 270px"
+        sizes="(min-width: 768px) 1366px, (max-width: 767px) 320px"
+        srcset="img/blog.png 1361w, img/blog-mobile.png 320w"
 
         width="1340"
         height="561"
@@ -359,7 +386,21 @@
         </li>
       </ul>
     </div>
-    <img class="questions__image" src="img/questions.png" width="645" height="803" alt="девушка с парнем за ноутбуком">
+
+    <picture>
+      <source media="(min-width: 768px)" srcset="img/questions.webp" type="image/webp">
+      <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/questions@2x.webp" type="image/webp">
+      <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/questions@2x.png" type="image/png">
+      <!-- 1x: 645px, 2x: 1290px -->
+      <img
+        class="questions__image"
+
+        width="465"
+        height="803"
+        src="img/questions.png"
+        alt="Пара в горах"
+      >
+    </picture>
   </section>
 
   <section class="review">
@@ -367,13 +408,17 @@
     <ul class="review__slider">
       <li class="review__slide review__slide--active">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/review.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/review-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
           <!-- 1x: 364px, 2x: 728px -->
           <img
             class="review__slide-img"
-            srcset="img/review-mobile.png 320w"
-            sizes="(max-width: 767px) 270px"
+            sizes="(min-width: 768px) 500px, (max-width: 767px) 260px"
+            srcset="img/review.png 364w, img/review-mobile.png 240w"
 
             width="364"
             height="480"
@@ -464,21 +509,25 @@
         </div>
       </li>
       <li class="review__slide">
-        <picture>
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
-          <!-- 1x: 364px, 2x: 728px -->
-          <img
-            class="review__slide-img"
-            srcset="img/review-mobile.png 320w"
-            sizes="(max-width: 767px) 270px"
-
-            width="364"
-            height="480"
-            src="img/review.png"
-            alt="Ольга Михайлова"
-          >
-        </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/review.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/review-mobile.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
+            <!-- 1x: 364px, 2x: 728px -->
+            <img
+              class="review__slide-img"
+              sizes="(min-width: 768px) 500px, (max-width: 767px) 260px"
+              srcset="img/review.png 364w, img/review-mobile.png 240w"
+  
+              width="364"
+              height="480"
+              src="img/review.png"
+              alt="Ольга Михайлова"
+            >
+          </picture>
         <div class="review__description">
           <h3 class="review__name">Оксана Иванова</h3>
           <p class="review__program"><span>Программа:</span> Арт-Тель, январь-сетнябрь 2018</p>
@@ -514,13 +563,17 @@
       </li>
       <li class="review__slide">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/review.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/review-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
           <!-- 1x: 364px, 2x: 728px -->
           <img
             class="review__slide-img"
-            srcset="img/review-mobile.png 320w"
-            sizes="(max-width: 767px) 270px"
+            sizes="(min-width: 768px) 500px, (max-width: 767px) 260px"
+            srcset="img/review.png 364w, img/review-mobile.png 240w"
 
             width="364"
             height="480"
@@ -561,22 +614,22 @@
           </div>
         </div>
       </li>
-      <div class="review__slider-control">
-        <p class="review__slider-numbers"><span class="review__current-slide">3</span> / <span class="review__number-slides">6</span></p>
-        <button type="button" class="review__prew">
-          <span class="visually-hidden">Предидущий слайд</span>
-          <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.2" d="M10 1.5L2 9L10 16.5" stroke="#484848" stroke-width="2"/>
-          </svg>
-        </button>
-        <button type="button" class="review__next">
-          <span class="visually-hidden">Следующий слайд</span>
-          <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.2" d="M1 16.5L9 9L0.999999 1.5" stroke="#484848" stroke-width="2"/>
-          </svg>
-        </button>
-      </div>
     </ul>
+    <div class="review__slider-control">
+      <p class="review__slider-numbers"><span class="review__current-slide">3</span> / <span class="review__number-slides">6</span></p>
+      <button type="button" class="review__prew">
+        <span class="visually-hidden">Предидущий слайд</span>
+        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.2" d="M10 1.5L2 9L10 16.5" stroke="#484848" stroke-width="2"/>
+        </svg>
+      </button>
+      <button type="button" class="review__next">
+        <span class="visually-hidden">Следующий слайд</span>
+        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.2" d="M1 16.5L9 9L0.999999 1.5" stroke="#484848" stroke-width="2"/>
+        </svg>
+      </button>
+    </div>
   </section>
 
   <section class="detail">
@@ -592,7 +645,16 @@
         </svg>
       </p>
       <div class="detail__curator">
-        <img src="img/anna-gorelik.jpg" width="112" height="112" alt="Анна Горелик">
+        <picture>
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/anna-gorelik@2x.jpg" type="image/jpg">
+          <!-- 1x: 112px, 2x: 224px -->
+          <img
+            width="112"
+            height="112"
+            src="img/anna-gorelik.jpg"
+            alt="Анна Горелик"
+          >
+        </picture>
         <div class="detail__curator-desc">
           <p class="detail__curator-name"><span>Ваш куратор:</span> Анна Горелик</p>
           <address>Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</address>
@@ -629,8 +691,8 @@
         <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/detail-map-mobile@2x.png" type="image/png">
         <!-- 1x: 364px, 2x: 728px -->
         <img
-          srcset="img/detail-map-mobile.png 320w"
-          sizes="(max-width: 767px) 270px"
+          sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+          srcset="img/detail-map.png 702w, img/detail-map-mobile.png 320w"
 
           width="702"
           height="448"

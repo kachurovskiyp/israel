@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
-<linearGradient id="paint0_linear" x1="4.21053" y1="0.457144" x2="13.147" y2="3.43295" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"/>
+<linearGradient id="paint1_linear" x1="4.21053" y1="0.457144" x2="13.147" y2="3.43295" gradientUnits="userSpaceOnUse">
+<stop offset="100%" stop-color="#FFC341"/>
 <stop offset="0.963542" stop-color="#FFD701"/>
 </linearGradient>
 
-<linearGradient id="paint0_linear" x1="16.8421" y1="1.82858" x2="52.588" y2="13.7318" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"/>
+<linearGradient x1="16.8421" y1="1.82858" x2="52.588" y2="13.7318" gradientUnits="userSpaceOnUse">
+<stop offset="100%" stop-color="#FFC341"/>
 <stop offset="0.963542" stop-color="#FFD701"/>
 </linearGradient>
-<linearGradient id="paint1_linear" x1="30.6316" y1="8.02857" x2="55.5095" y2="19.0743" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"/>
+<linearGradient x1="30.6316" y1="8.02857" x2="55.5095" y2="19.0743" gradientUnits="userSpaceOnUse">
+<stop offset="100%" stop-color="#FFC341"/>
 <stop offset="0.963542" stop-color="#FFD701"/>
 </linearGradient>
 </defs><symbol id="icon-checkbox-checked" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></symbol><symbol id="icon-checkbox" viewBox="0 0 16 16">
@@ -21,42 +21,10 @@
 
 </symbol><symbol id="icon-cursor" viewBox="0 0 477.883 477.883">
 <g>
-	<g>
-		<path d="M468.456,1.808c-4.811-2.411-10.478-2.411-15.289,0l0,0L9.433,223.675c-8.429,4.219-11.842,14.471-7.624,22.9
-			c2.401,4.798,6.919,8.188,12.197,9.151l176.111,32.034l32.034,176.111c1.311,7.219,7.091,12.793,14.353,13.841
-			c0.803,0.116,1.613,0.173,2.423,0.171c6.469,0.003,12.383-3.651,15.275-9.438L476.07,24.711
-			C480.292,16.284,476.883,6.03,468.456,1.808z"/>
-	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
+	<path d="M468.456,1.808c-4.811-2.411-10.478-2.411-15.289,0l0,0L9.433,223.675c-8.429,4.219-11.842,14.471-7.624,22.9
+		c2.401,4.798,6.919,8.188,12.197,9.151l176.111,32.034l32.034,176.111c1.311,7.219,7.091,12.793,14.353,13.841
+		c0.803,0.116,1.613,0.173,2.423,0.171c6.469,0.003,12.383-3.651,15.275-9.438L476.07,24.711
+		C480.292,16.284,476.883,6.03,468.456,1.808z"/>
 </g>
 </symbol><symbol id="icon-fb" viewBox="0 0 15 28">
 <path d="M11.7171 4.91672H14.2V0.591924C13.7716 0.532991 12.2984 0.400391 10.5827 0.400391C7.00278 0.400391 4.55045 2.65232 4.55045 6.79126V10.6004H0.599976V15.4352H4.55045V27.6004H9.39391V15.4363H13.1846L13.7863 10.6015H9.39278V7.27066C9.39391 5.87326 9.77015 4.91672 11.7171 4.91672Z" fill="black"/>

@@ -15,17 +15,17 @@
   <!-- include svg sprite -->
   <div style="display:none">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
-<linearGradient id="paint0_linear" x1="4.21053" y1="0.457144" x2="13.147" y2="3.43295" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"></stop>
+<linearGradient id="paint1_linear" x1="4.21053" y1="0.457144" x2="13.147" y2="3.43295" gradientUnits="userSpaceOnUse">
+<stop offset="100%" stop-color="#FFC341"></stop>
 <stop offset="0.963542" stop-color="#FFD701"></stop>
 </linearGradient>
 
-<linearGradient id="paint0_linear" x1="16.8421" y1="1.82858" x2="52.588" y2="13.7318" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"></stop>
+<linearGradient x1="16.8421" y1="1.82858" x2="52.588" y2="13.7318" gradientUnits="userSpaceOnUse">
+<stop offset="100%" stop-color="#FFC341"></stop>
 <stop offset="0.963542" stop-color="#FFD701"></stop>
 </linearGradient>
-<linearGradient id="paint1_linear" x1="30.6316" y1="8.02857" x2="55.5095" y2="19.0743" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"></stop>
+<linearGradient x1="30.6316" y1="8.02857" x2="55.5095" y2="19.0743" gradientUnits="userSpaceOnUse">
+<stop offset="100%" stop-color="#FFC341"></stop>
 <stop offset="0.963542" stop-color="#FFD701"></stop>
 </linearGradient>
 </defs><symbol id="icon-checkbox-checked" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"></path></symbol><symbol id="icon-checkbox" viewBox="0 0 16 16">
@@ -37,42 +37,10 @@
 
 </symbol><symbol id="icon-cursor" viewBox="0 0 477.883 477.883">
 <g>
-	<g>
-		<path d="M468.456,1.808c-4.811-2.411-10.478-2.411-15.289,0l0,0L9.433,223.675c-8.429,4.219-11.842,14.471-7.624,22.9
-			c2.401,4.798,6.919,8.188,12.197,9.151l176.111,32.034l32.034,176.111c1.311,7.219,7.091,12.793,14.353,13.841
-			c0.803,0.116,1.613,0.173,2.423,0.171c6.469,0.003,12.383-3.651,15.275-9.438L476.07,24.711
-			C480.292,16.284,476.883,6.03,468.456,1.808z"></path>
-	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
+	<path d="M468.456,1.808c-4.811-2.411-10.478-2.411-15.289,0l0,0L9.433,223.675c-8.429,4.219-11.842,14.471-7.624,22.9
+		c2.401,4.798,6.919,8.188,12.197,9.151l176.111,32.034l32.034,176.111c1.311,7.219,7.091,12.793,14.353,13.841
+		c0.803,0.116,1.613,0.173,2.423,0.171c6.469,0.003,12.383-3.651,15.275-9.438L476.07,24.711
+		C480.292,16.284,476.883,6.03,468.456,1.808z"></path>
 </g>
 </symbol><symbol id="icon-fb" viewBox="0 0 15 28">
 <path d="M11.7171 4.91672H14.2V0.591924C13.7716 0.532991 12.2984 0.400391 10.5827 0.400391C7.00278 0.400391 4.55045 2.65232 4.55045 6.79126V10.6004H0.599976V15.4352H4.55045V27.6004H9.39391V15.4363H13.1846L13.7863 10.6015H9.39278V7.27066C9.39391 5.87326 9.77015 4.91672 11.7171 4.91672Z" fill="black"></path>
@@ -117,15 +85,16 @@
     <h2 class="about__title title">О программе</h2>
     <p class="about__text">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.<br> В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
 
-    <div class="about__video"> 
-
-      <!-- Не подгружается мобильное изображение  srcset="img/about-photo-mobile.png 320px" -->
-
+    <div class="about__video">
       <picture>
+        <source media="(min-width: 768px)" srcset="img/about-photo.webp" type="image/webp">
+        <source media="(max-width: 767px)" srcset="img/about-photo-mobile.webp" type="image/webp">
+        <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/about-photo@2x.webp" type="image/webp">
         <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/about-photo@2x.png" type="image/png">
+        <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/about-photo-mobile@2x.webp" type="image/webp">
         <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/about-photo-mobile@2x.png" type="image/png">
         <!-- 1x: 870px, 2x: 1740px -->
-        <img class="about__photo" sizes="(max-width: 767px) 300px" srcset="img/about-photo-mobile.png 320w" src="img/about-photo.png" width="870" height="460" alt="О программе">
+        <img class="about__photo" sizes="(min-width: 768px) 500px, (max-width: 767px) 300px" srcset="img/about-photo.png 870w, img/about-photo-mobile.png 320w" src="img/about-photo.png" width="870" height="460" alt="О программе">
       </picture>
 
       <button class="about__play" type="button">
@@ -172,7 +141,7 @@
         <p class="programs__text">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
         <p class="programs__text">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
       </div>
-      <div class="programs__description programs__description--academic">
+      <div class="programs__description programs__description--academic programs__description--active">
         <h3 class="programs__sub-title">Академические</h3>
         <p class="programs__text">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
         <p class="programs__text">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
@@ -207,6 +176,8 @@
 
   <section class="how">
     <picture>
+      <source media="(min-width: 768px)" srcset="img/how.webp" type="image/webp">
+      <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/how@2x.webp" type="image/webp">
       <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/how@2x.png" type="image/png">
       <!-- 1x: 581px, 2x: 1162px -->
       <img class="how__image" width="581" height="707" src="img/how.png" alt="Счастливые люди">
@@ -231,50 +202,70 @@
     <ul class="live__gallery gallery">
       <li class="live__gallery-item live__gallery-item--active">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/1img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/1img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/1img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/1img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/1img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/1img-mobile@2x.png" type="image/png">
           <!-- 1x: 482px, 2x: 964px -->
-          <img srcset="img/1img-mobile.png 320w" sizes="(max-width: 767px) 270px" width="482" height="732" src="img/1img.png" alt="Памятние архитектуры в Израиле">
+          <img sizes="(min-width: 768px) 500px, (max-width: 767px) 300px" srcset="img/1img.png 482w, img/1img-mobile.png 288w" width="482" height="732" src="img/1img.png" alt="Памятние архитектуры в Израиле">
         </picture>
         <p>Экскурсии по Израилю <br> и знакомство с его историей</p>
       </li>
 
       <li class="live__gallery-item live__gallery-item--vertical">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/2img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/2img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/2img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/2img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/2img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/2img-mobile@2x.png" type="image/png">
           <!-- 1x: 211px, 2x: 422px -->
-          <img srcset="img/2img-mobile.png 320w" sizes="(max-width: 767px) 270px" width="211" height="318" src="img/2img.png" alt="Парень за ноутбуком">
+          <img sizes="(min-width: 768px) 500px, (max-width: 767px) 300px" srcset="img/2img.png 211w, img/2img-mobile.png 288w" width="211" height="318" src="img/2img.png" alt="Парень за ноутбуком">
         </picture>
         <p>Изучение <br> иврита</p>
       </li>
 
       <li class="live__gallery-item">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/3img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/3img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/3img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/3img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/3img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/3img-mobile@2x.png" type="image/png">
           <!-- 1x: 411px, 2x: 822px -->
-          <img srcset="img/3img-mobile.png 300w" sizes="(max-width: 767px) 270px" width="411" height="318" src="img/3img.png" alt="Два парня у монитора">
+          <img sizes="(min-width: 768px) 500px, (max-width: 767px) 300px" srcset="img/3img.png 211w, img/3img-mobile.png 288w" width="411" height="318" src="img/3img.png" alt="Два парня у монитора">
         </picture>
         <p>Обучение современным <br> навыкам и профессиям</p>
       </li>
 
       <li class="live__gallery-item">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/4img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/4img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/4img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/4img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/4img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/4img-mobile@2x.png" type="image/png">
           <!-- 1x: 411px, 2x: 822px -->
-          <img srcset="img/4img-mobile.png 300w" sizes="(max-width: 767px) 270px" width="411" height="318" src="img/4img.png" alt="Парень с двумя девушками">
+          <img sizes="(min-width: 768px) 500px, (max-width: 767px) 300px" srcset="img/4img.png 411w, img/4img-mobile.png 288w" width="411" height="318" src="img/4img.png" alt="Парень с двумя девушками">
         </picture>
         <p>Совместные творческие проекты с израильской молодёжью</p>
       </li>
 
       <li class="live__gallery-item live__gallery-item--vertical">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/5img.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/5img-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/5img@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/5img@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/5img-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/5img-mobile@2x.png" type="image/png">
           <!-- 1x: 211px, 2x: 422px -->
-          <img srcset="img/5img-mobile.png 300w" sizes="(max-width: 767px) 270px" width="211" height="318" src="img/5img.png" alt="Парень на вершине горы">
+          <img sizes="(min-width: 768px) 500px, (max-width: 767px) 300px" srcset="img/5img.png 211w, img/5img-mobile.png 288w" width="211" height="318" src="img/5img.png" alt="Парень на вершине горы">
           </picture>
         <p>Развитие лидерства</p>
       </li>
@@ -283,10 +274,14 @@
 
   <section class="blog">
     <picture>
+      <source media="(min-width: 768px)" srcset="img/blog.webp" type="image/webp">
+      <source media="(max-width: 767px)" srcset="img/blog-mobile.webp" type="image/webp">
+      <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/blog@2x.webp" type="image/webp">
       <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/blog@2x.png" type="image/png">
+      <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/blog-mobile@2x.webp" type="image/webp">
       <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/blog-mobile@2x.png" type="image/png">
       <!-- 1x: 1340px, 2x: 2680px -->
-      <img class="blog__image" srcset="img/blog-mobile.png 300w" sizes="(max-width: 767px) 270px" width="1340" height="561" src="img/blog.png" alt="Пара в горах">
+      <img class="blog__image" sizes="(min-width: 768px) 1366px, (max-width: 767px) 320px" srcset="img/blog.png 1361w, img/blog-mobile.png 320w" width="1340" height="561" src="img/blog.png" alt="Пара в горах">
     </picture>
     <div class="blog__inner">
       <h2 class="blog__title title">#masaisrael</h2>
@@ -366,7 +361,14 @@
         </li>
       </ul>
     </div>
-    <img class="questions__image" src="img/questions.png" width="645" height="803" alt="девушка с парнем за ноутбуком">
+
+    <picture>
+      <source media="(min-width: 768px)" srcset="img/questions.webp" type="image/webp">
+      <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/questions@2x.webp" type="image/webp">
+      <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/questions@2x.png" type="image/png">
+      <!-- 1x: 645px, 2x: 1290px -->
+      <img class="questions__image" width="465" height="803" src="img/questions.png" alt="Пара в горах">
+    </picture>
   </section>
 
   <section class="review">
@@ -374,10 +376,14 @@
     <ul class="review__slider">
       <li class="review__slide review__slide--active">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/review.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/review-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
           <!-- 1x: 364px, 2x: 728px -->
-          <img class="review__slide-img" srcset="img/review-mobile.png 320w" sizes="(max-width: 767px) 270px" width="364" height="480" src="img/review.png" alt="Ольга Михайлова">
+          <img class="review__slide-img" sizes="(min-width: 768px) 500px, (max-width: 767px) 260px" srcset="img/review.png 364w, img/review-mobile.png 240w" width="364" height="480" src="img/review.png" alt="Ольга Михайлова">
         </picture>
         <div class="review__description">
           <h3 class="review__name">Ольга Михайлова</h3>
@@ -453,12 +459,16 @@
         </div>
       </li>
       <li class="review__slide">
-        <picture>
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
-          <!-- 1x: 364px, 2x: 728px -->
-          <img class="review__slide-img" srcset="img/review-mobile.png 320w" sizes="(max-width: 767px) 270px" width="364" height="480" src="img/review.png" alt="Ольга Михайлова">
-        </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/review.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/review-mobile.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
+            <!-- 1x: 364px, 2x: 728px -->
+            <img class="review__slide-img" sizes="(min-width: 768px) 500px, (max-width: 767px) 260px" srcset="img/review.png 364w, img/review-mobile.png 240w" width="364" height="480" src="img/review.png" alt="Ольга Михайлова">
+          </picture>
         <div class="review__description">
           <h3 class="review__name">Оксана Иванова</h3>
           <p class="review__program"><span>Программа:</span> Арт-Тель, январь-сетнябрь 2018</p>
@@ -494,10 +504,14 @@
       </li>
       <li class="review__slide">
         <picture>
+          <source media="(min-width: 768px)" srcset="img/review.webp" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/review-mobile.webp" type="image/webp">
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/review@2x.png" type="image/png">
+          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.webp" type="image/webp">
           <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/review-mobile@2x.png" type="image/png">
           <!-- 1x: 364px, 2x: 728px -->
-          <img class="review__slide-img" srcset="img/review-mobile.png 320w" sizes="(max-width: 767px) 270px" width="364" height="480" src="img/review.png" alt="Ольга Михайлова">
+          <img class="review__slide-img" sizes="(min-width: 768px) 500px, (max-width: 767px) 260px" srcset="img/review.png 364w, img/review-mobile.png 240w" width="364" height="480" src="img/review.png" alt="Ольга Михайлова">
         </picture>
         <div class="review__description">
           <h3 class="review__name">Виктория Перкова</h3>
@@ -532,22 +546,22 @@
           </div>
         </div>
       </li>
-      <div class="review__slider-control">
-        <p class="review__slider-numbers"><span class="review__current-slide">3</span> / <span class="review__number-slides">6</span></p>
-        <button type="button" class="review__prew">
-          <span class="visually-hidden">Предидущий слайд</span>
-          <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.2" d="M10 1.5L2 9L10 16.5" stroke="#484848" stroke-width="2"></path>
-          </svg>
-        </button>
-        <button type="button" class="review__next">
-          <span class="visually-hidden">Следующий слайд</span>
-          <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.2" d="M1 16.5L9 9L0.999999 1.5" stroke="#484848" stroke-width="2"></path>
-          </svg>
-        </button>
-      </div>
     </ul>
+    <div class="review__slider-control">
+      <p class="review__slider-numbers"><span class="review__current-slide">3</span> / <span class="review__number-slides">6</span></p>
+      <button type="button" class="review__prew">
+        <span class="visually-hidden">Предидущий слайд</span>
+        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.2" d="M10 1.5L2 9L10 16.5" stroke="#484848" stroke-width="2"></path>
+        </svg>
+      </button>
+      <button type="button" class="review__next">
+        <span class="visually-hidden">Следующий слайд</span>
+        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.2" d="M1 16.5L9 9L0.999999 1.5" stroke="#484848" stroke-width="2"></path>
+        </svg>
+      </button>
+    </div>
   </section>
 
   <section class="detail">
@@ -563,7 +577,11 @@
         </svg>
       </p>
       <div class="detail__curator">
-        <img src="img/anna-gorelik.jpg" width="112" height="112" alt="Анна Горелик">
+        <picture>
+          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/anna-gorelik@2x.jpg" type="image/jpg">
+          <!-- 1x: 112px, 2x: 224px -->
+          <img width="112" height="112" src="img/anna-gorelik.jpg" alt="Анна Горелик">
+        </picture>
         <div class="detail__curator-desc">
           <p class="detail__curator-name"><span>Ваш куратор:</span> Анна Горелик</p>
           <address>Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</address>
@@ -599,7 +617,7 @@
         <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/detail-map@2x.png" type="image/png">
         <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/detail-map-mobile@2x.png" type="image/png">
         <!-- 1x: 364px, 2x: 728px -->
-        <img srcset="img/detail-map-mobile.png 320w" sizes="(max-width: 767px) 270px" width="702" height="448" src="img/detail-map.png" alt="Новосибирск, ул. Щетинкина 68">
+        <img sizes="(min-width: 768px) 500px, (max-width: 767px) 300px" srcset="img/detail-map.png 702w, img/detail-map-mobile.png 320w" width="702" height="448" src="img/detail-map.png" alt="Новосибирск, ул. Щетинкина 68">
       </picture>
     </a>
     <form class="detail__feedback">

@@ -56,6 +56,10 @@
   &--religious {
     background-position: 16px -250px;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .programs__item--active .programs__button {
@@ -130,7 +134,7 @@
   margin-left: 52px;
   padding-left: 10px;
 
-  &--academic {
+  &--active {
     display: block;
   }
 }
