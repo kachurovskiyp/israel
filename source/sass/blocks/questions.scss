@@ -135,16 +135,23 @@
 
   .questions__item {
     position: relative;
-    padding: 40px 40px 17px 0;
+    padding: 39px 40px 19px 0;
     margin: 0;
 
     &:first-of-type {
       padding-top: 0;
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      padding-top: 45px;
+      padding-bottom: 20px;
     }
   }
 
   .questions__item label {
     @include font-size(16px, 160%);
+    padding-right: 10px;
 
     &::before {
       left: 6px;
@@ -155,6 +162,10 @@
       top: 9px;
       right: -25px;
     }
+  }
+
+  .questions__item:last-of-type label {
+    padding-right: 60px;
   }
 
   .questions__description {

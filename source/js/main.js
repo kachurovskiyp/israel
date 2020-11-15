@@ -167,6 +167,7 @@
   }
 
   window.addEventListener('resize', activeSlider);
+  window.addEventListener('load', activeSlider);
 
 })();
 

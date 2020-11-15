@@ -45,3 +45,14 @@
   display: block;
 }
 
+@media (max-width: $tablet-width) {
+  .call form {
+    width: 85%;
+    height: auto;
+    padding: 20px 15px;
+  }
+
+  .modal__inner input[type=text] {
+    width: 100%;
+  }
+}

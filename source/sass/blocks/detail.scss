@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 56px;
+  justify-content: space-between;
 }
 
 .detail__title {
@@ -34,7 +35,8 @@
 }
 
 .detail__description {
-  width: 42%;
+  width: 38%;
+  margin-left: 8%;
 }
 
 .detail__curator {
@@ -89,6 +91,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   margin-top: 42px;
+  padding-left: 8%;
 }
 
 .detail__text {
@@ -102,7 +105,6 @@
 
 .detail__map-link {
   margin-top: 41px;
-  margin-left: 25px;
 }
 
 .detail__feedback-wrap {
@@ -158,7 +160,8 @@
   }
 
   .detail__description {
-    width: 100%;
+    width: auto;
+    margin-left: unset;
   }
 
   .detail__curator {
@@ -190,6 +193,7 @@
   .detail__feedback {
     display: block;
     margin-top: 0;
+    padding-left: unset;
   }
 
   .detail__feedback-wrap {

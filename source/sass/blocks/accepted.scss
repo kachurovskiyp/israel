@@ -19,3 +19,11 @@
   margin: 0 auto;
   text-align: center;
 }
+
+@media (max-width: $tablet-width) {
+  .modal__inner {
+    width: 85%;
+    height: auto;
+    padding: 20px 15px;
+  }
+}

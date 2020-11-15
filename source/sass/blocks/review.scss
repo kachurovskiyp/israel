@@ -97,8 +97,8 @@
   align-items: center;
 
   position: absolute;
-  left: 405px;
-  bottom: -14px;
+  left: 503px;
+  bottom: -13px;
   z-index: 5;
 }
 
@@ -126,7 +126,8 @@
 
 @media (max-width: $tablet-width) {
   .review {
-    margin-bottom: 37px;
+    margin-bottom: 73px;
+    margin-top: -67px;
   }
 
   .review__slider {
@@ -148,7 +149,7 @@
 
   .review__slider-control {
     position: absolute;
-    top: 319px;
+    top: -300px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -158,15 +159,15 @@
   }
 
   .review__name {
-    margin-top: 35px;
+    margin-top: 32px;
   }
 
-  .rewiev__program {
+  .review__program {
     @include font-size(14px, 160%);
     margin-bottom: 24px;
   }
 
-  .rewiev__program span {
+  .review__program span {
     @include font-size(14px, 160%);
     display: block;
   }
@@ -185,5 +186,10 @@
   .review__social {
     margin-top: -17px;
     margin-left: -21px;
+  }
+
+  .review__footer {
+    justify-content: flex-start;
+    margin-top: 35px;
   }
 }

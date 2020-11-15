@@ -32,6 +32,10 @@
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
 }
 
+.blog__text br {
+  display: none;
+}
+
 .blog__link {
   text-decoration: none;
 
@@ -78,6 +82,10 @@
     @include font-size(16px, 160%);
     margin-left: 20px;
     margin-right: 24px;
+  }
+
+  .blog__text br {
+    display: inline;
   }
 
   .blog__link {
