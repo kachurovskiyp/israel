@@ -174,117 +174,119 @@
   <section class="live">
     <h2 class="live__title title">Жизнь<br> в израиле</h2>
     <p class="live__text">Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
-    <ul class="live__gallery gallery">
-      <li class="live__gallery-item live__gallery-item--active">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/1img.webp" type="image/webp">
-          <source media="(max-width: 767px)" srcset="img/1img-mobile.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/1img@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/1img@2x.png" type="image/png">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/1img-mobile@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/1img-mobile@2x.png" type="image/png">
-          <!-- 1x: 482px, 2x: 964px -->
-          <img
-            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
-            srcset="img/1img.png 482w, img/1img-mobile.png 288w"
+    <div class="live__gallery gallery swiper-container">
+      <div class="swiper-wrapper swiper-wrapper--block">
+        <div class="live__gallery-item live__gallery-item--active swiper-slide swiper-slide--width-auto">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/1img.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/1img-mobile.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/1img@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/1img@2x.png" type="image/png">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/1img-mobile@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/1img-mobile@2x.png" type="image/png">
+            <!-- 1x: 482px, 2x: 964px -->
+            <img
+              sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+              srcset="img/1img.png 482w, img/1img-mobile.png 288w"
 
-            width="482"
-            height="732"
-            src="img/1img.png"
-            alt="Памятние архитектуры в Израиле"
-          >
-        </picture>
-        <p>Экскурсии по Израилю <br> и знакомство с его историей</p>
-      </li>
-
-      <li class="live__gallery-item live__gallery-item--vertical">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/2img.webp" type="image/webp">
-          <source media="(max-width: 767px)" srcset="img/2img-mobile.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/2img@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/2img@2x.png" type="image/png">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/2img-mobile@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/2img-mobile@2x.png" type="image/png">
-          <!-- 1x: 211px, 2x: 422px -->
-          <img
-            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
-            srcset="img/2img.png 211w, img/2img-mobile.png 288w"
-
-            width="211"
-            height="318"
-            src="img/2img.png"
-            alt="Парень за ноутбуком"
-          >
-        </picture>
-        <p>Изучение <br> иврита</p>
-      </li>
-
-      <li class="live__gallery-item">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/3img.webp" type="image/webp">
-          <source media="(max-width: 767px)" srcset="img/3img-mobile.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/3img@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/3img@2x.png" type="image/png">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/3img-mobile@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/3img-mobile@2x.png" type="image/png">
-          <!-- 1x: 411px, 2x: 822px -->
-          <img
-            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
-            srcset="img/3img.png 211w, img/3img-mobile.png 288w"
-
-            width="411"
-            height="318"
-            src="img/3img.png"
-            alt="Два парня у монитора"
-          >
-        </picture>
-        <p>Обучение современным <br> навыкам и профессиям</p>
-      </li>
-
-      <li class="live__gallery-item">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/4img.webp" type="image/webp">
-          <source media="(max-width: 767px)" srcset="img/4img-mobile.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/4img@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/4img@2x.png" type="image/png">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/4img-mobile@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/4img-mobile@2x.png" type="image/png">
-          <!-- 1x: 411px, 2x: 822px -->
-          <img
-            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
-            srcset="img/4img.png 411w, img/4img-mobile.png 288w"
-
-            width="411"
-            height="318"
-            src="img/4img.png"
-            alt="Парень с двумя девушками"
-          >
-        </picture>
-        <p>Совместные творческие проекты с израильской молодёжью</p>
-      </li>
-
-      <li class="live__gallery-item live__gallery-item--vertical">
-        <picture>
-          <source media="(min-width: 768px)" srcset="img/5img.webp" type="image/webp">
-          <source media="(max-width: 767px)" srcset="img/5img-mobile.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/5img@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/5img@2x.png" type="image/png">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/5img-mobile@2x.webp" type="image/webp">
-          <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/5img-mobile@2x.png" type="image/png">
-          <!-- 1x: 211px, 2x: 422px -->
-          <img
-            sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
-            srcset="img/5img.png 211w, img/5img-mobile.png 288w"
-
-            width="211"
-            height="318"
-            src="img/5img.png"
-            alt="Парень на вершине горы"
-          >
+              width="482"
+              height="732"
+              src="img/1img.png"
+              alt="Памятние архитектуры в Израиле"
+            >
           </picture>
-        <p>Развитие лидерства</p>
-      </li>
-    </ul>
+          <p>Экскурсии по Израилю <br> и знакомство с его историей</p>
+        </div>
+
+        <div class="live__gallery-item live__gallery-item--vertical swiper-slide swiper-slide--width-auto">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/2img.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/2img-mobile.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/2img@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/2img@2x.png" type="image/png">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/2img-mobile@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/2img-mobile@2x.png" type="image/png">
+            <!-- 1x: 211px, 2x: 422px -->
+            <img
+              sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+              srcset="img/2img.png 211w, img/2img-mobile.png 288w"
+
+              width="211"
+              height="318"
+              src="img/2img.png"
+              alt="Парень за ноутбуком"
+            >
+          </picture>
+          <p>Изучение <br> иврита</p>
+        </div>
+
+        <div class="live__gallery-item swiper-slide swiper-slide--width-auto">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/3img.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/3img-mobile.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/3img@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/3img@2x.png" type="image/png">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/3img-mobile@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/3img-mobile@2x.png" type="image/png">
+            <!-- 1x: 411px, 2x: 822px -->
+            <img
+              sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+              srcset="img/3img.png 211w, img/3img-mobile.png 288w"
+
+              width="411"
+              height="318"
+              src="img/3img.png"
+              alt="Два парня у монитора"
+            >
+          </picture>
+          <p>Обучение современным <br> навыкам и профессиям</p>
+        </div>
+
+        <div class="live__gallery-item swiper-slide swiper-slide--width-auto">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/4img.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/4img-mobile.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/4img@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/4img@2x.png" type="image/png">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/4img-mobile@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/4img-mobile@2x.png" type="image/png">
+            <!-- 1x: 411px, 2x: 822px -->
+            <img
+              sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+              srcset="img/4img.png 411w, img/4img-mobile.png 288w"
+
+              width="411"
+              height="318"
+              src="img/4img.png"
+              alt="Парень с двумя девушками"
+            >
+          </picture>
+          <p>Совместные творческие проекты с израильской молодёжью</p>
+        </div>
+
+        <div class="live__gallery-item live__gallery-item--vertical swiper-slide swiper-slide--width-auto">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/5img.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/5img-mobile.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/5img@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (min-width: 768px)" srcset="img/5img@2x.png" type="image/png">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/5img-mobile@2x.webp" type="image/webp">
+            <source media="(min-resolution: 144dpi) and (max-width: 767px)" srcset="img/5img-mobile@2x.png" type="image/png">
+            <!-- 1x: 211px, 2x: 422px -->
+            <img
+              sizes="(min-width: 768px) 500px, (max-width: 767px) 300px"
+              srcset="img/5img.png 211w, img/5img-mobile.png 288w"
+
+              width="211"
+              height="318"
+              src="img/5img.png"
+              alt="Парень на вершине горы"
+            >
+            </picture>
+          <p>Развитие лидерства</p>
+        </div>
+    </div>
+    </div>
   </section>
 
   <section class="blog">
