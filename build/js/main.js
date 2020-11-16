@@ -6,9 +6,6 @@
   const acceptModal = document.querySelector('.accepted');
   const modalClose = document.querySelector('.call__close');
 
-  const wantForm = document.querySelector('.want__form');
-  const detailForm = document.querySelector('.detail__feedback');
-
   const closeModal = () => {
     modalCall.classList.remove('call--open');
     modalClose.removeEventListener('click', closeModal);
@@ -63,121 +60,131 @@
   })
 
   /* form inside page */
-
-  wantForm.addEventListener('submit', openAccept);
-  detailForm.addEventListener('submit', openAccept);
-
+  if(document.querySelector('.want__form')) {
+    const wantForm = document.querySelector('.want__form');
+    wantForm.addEventListener('submit', openAccept);
+  }
+  
+  if(document.querySelector('.detail__feedback')) {
+    const detailForm = document.querySelector('.detail__feedback');
+    detailForm.addEventListener('submit', openAccept);
+  }
+  
   /* rewiev slider  */
 
-  const slider = document.querySelector('.review__slider');
-  const slides = slider.querySelectorAll('.review__slide');
-  const reviewSection = document.querySelector('.review');
+  if(document.querySelector('.review__slider')) {
+    const slider = document.querySelector('.review__slider');
+    const slides = slider.querySelectorAll('.review__slide');
+    const reviewSection = document.querySelector('.review');
 
-  const slidesNumberSpan = reviewSection.querySelector('.review__number-slides');
-  slidesNumberSpan.innerHTML = slides.length;
+    const slidesNumberSpan = reviewSection.querySelector('.review__number-slides');
+    slidesNumberSpan.innerHTML = slides.length;
 
-  let currentSlide = 0;
-  const currentSlideSpan = reviewSection.querySelector('.review__current-slide');
-  currentSlideSpan.innerHTML = currentSlide + 1;
-
-  const nextButton = reviewSection.querySelector('.review__next');
-  const prewButton = reviewSection.querySelector('.review__prew');
-
-  const changeSlide = (currentSlide) => {
-    slides.forEach((slide) => {
-      slide.classList.remove('review__slide--active');
-    })
-    slides[currentSlide].classList.add('review__slide--active');
+    let currentSlide = 0;
+    const currentSlideSpan = reviewSection.querySelector('.review__current-slide');
     currentSlideSpan.innerHTML = currentSlide + 1;
-  }
 
-  const getNextSlide = () => {
-    if(currentSlide < slides.length - 1) {
-      currentSlide++;
-    } else {
-      currentSlide = 0;
+    const nextButton = reviewSection.querySelector('.review__next');
+    const prewButton = reviewSection.querySelector('.review__prew');
+
+    const changeSlide = (currentSlide) => {
+      slides.forEach((slide) => {
+        slide.classList.remove('review__slide--active');
+      })
+      slides[currentSlide].classList.add('review__slide--active');
+      currentSlideSpan.innerHTML = currentSlide + 1;
     }
-    changeSlide(currentSlide);
-  }
 
-  const getPrewSlide = () => {
-
-    if(currentSlide === 0) {
-      currentSlide = slides.length;
+    const getNextSlide = () => {
+      if(currentSlide < slides.length - 1) {
+        currentSlide++;
+      } else {
+        currentSlide = 0;
+      }
+      changeSlide(currentSlide);
     }
-    currentSlide--;
-    changeSlide(currentSlide);
-  }
 
-  nextButton.addEventListener('click', getNextSlide);
-  prewButton.addEventListener('click', getPrewSlide);
+    const getPrewSlide = () => {
+
+      if(currentSlide === 0) {
+        currentSlide = slides.length;
+      }
+      currentSlide--;
+      changeSlide(currentSlide);
+    }
+
+    nextButton.addEventListener('click', getNextSlide);
+    prewButton.addEventListener('click', getPrewSlide);
+  }
 
   /* programs change */
+ 
+  if(document.querySelector('.programs')) {
+    const programs = document.querySelector('.programs');
+    const programsButtonItems = programs.querySelectorAll('.programs__item');
+    const programsDescs = programs.querySelectorAll('.programs__description');
 
-  const programs = document.querySelector('.programs');
-  const programsButtonItems = programs.querySelectorAll('.programs__item');
-  const programsDescs = programs.querySelectorAll('.programs__description');
+    const resetButtons = () => {
+      programsButtonItems.forEach((item) => {
+        item.classList.remove('programs__item--active');
+      });
+    }
+  
+    const resetDescs = () => {
+      programsDescs.forEach((item) => {
+        item.classList.remove('programs__description--active');
+      })
+    }
+  
+    const changeDesc = (evt) => {
+      const targetClass = `programs__description--${evt.target.value}`;
+      const activeClass = 'programs__description--active';
+      resetButtons();
+      resetDescs();
+  
+      evt.target.parentNode.classList.add('programs__item--active');
+      programsDescs.forEach((item => {
+        if (item.classList.contains(targetClass)) {
+          item.classList.add(activeClass);
+        }
+      }));
+    }
 
-  const resetButtons = () => {
     programsButtonItems.forEach((item) => {
-      item.classList.remove('programs__item--active');
-    });
-  }
-
-  const resetDescs = () => {
-    programsDescs.forEach((item) => {
-      item.classList.remove('programs__description--active');
+      item.querySelector('button').addEventListener('click', changeDesc);
     })
   }
 
-  const changeDesc = (evt) => {
-    const targetClass = `programs__description--${evt.target.value}`;
-    const activeClass = 'programs__description--active';
-    resetButtons();
-    resetDescs();
-
-    evt.target.parentNode.classList.add('programs__item--active');
-    programsDescs.forEach((item => {
-      if (item.classList.contains(targetClass)) {
-        item.classList.add(activeClass);
-      }
-    }));
-  }
-
-  programsButtonItems.forEach((item) => {
-    item.querySelector('button').addEventListener('click', changeDesc);
-  })
-
   /* live slider */
+  if(document.querySelector('.swiper-container')){
+    const tabletWidth = 767;
+    let liveSlider = undefined;
+    const liveSliderContainer = document.querySelector('.swiper-container');
 
-  const tabletWidth = 767;
-  let liveSlider = undefined;
-  const liveSliderContainer = document.querySelector('.swiper-container');
+    const activeSlider = () => {
+      if(window.innerWidth < tabletWidth) {
+        if (!liveSlider) {
+          liveSlider = new Swiper(liveSliderContainer);
+          liveSliderContainer.querySelector('.swiper-wrapper').classList.remove('swiper-wrapper--block');
+          liveSliderContainer.querySelectorAll('.swiper-slide').forEach((item) => {
+            item.classList.remove('swiper-slide--width-auto');
+          })
+        }
+      }
 
-  const activeSlider = () => {
-    if(window.innerWidth < tabletWidth) {
-      if (!liveSlider) {
-        liveSlider = new Swiper(liveSliderContainer);
-        liveSliderContainer.querySelector('.swiper-wrapper').classList.remove('swiper-wrapper--block');
-        liveSliderContainer.querySelectorAll('.swiper-slide').forEach((item) => {
-          item.classList.remove('swiper-slide--width-auto');
-        })
+      if (window.innerWidth > tabletWidth) {
+        if(liveSlider) {
+          liveSlider.destroy();
+          liveSlider = undefined;
+          liveSliderContainer.querySelector('.swiper-wrapper').classList.add('swiper-wrapper--block');
+          liveSliderContainer.querySelectorAll('.swiper-slide').forEach((item) => {
+            item.classList.add('swiper-slide--width-auto');
+          })
+        }
       }
     }
-    if (window.innerWidth > tabletWidth) {
-      if(liveSlider) {
-        liveSlider.destroy();
-        liveSlider = undefined;
-        liveSliderContainer.querySelector('.swiper-wrapper').classList.add('swiper-wrapper--block');
-        liveSliderContainer.querySelectorAll('.swiper-slide').forEach((item) => {
-          item.classList.add('swiper-slide--width-auto');
-        })
-      }
-    }
+
+    window.addEventListener('resize', activeSlider);
+    window.addEventListener('load', activeSlider);
   }
-
-  window.addEventListener('resize', activeSlider);
-  window.addEventListener('load', activeSlider);
-
 })();
-

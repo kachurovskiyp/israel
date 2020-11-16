@@ -14,6 +14,7 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var babel = require("gulp-babel");
 var del = require("del");
 
 gulp.task("css", function () {
@@ -101,6 +102,9 @@ gulp.task("copy-js", function () {
     ], {
       base: "source"
     })
+  .pipe(babel({
+      presets: ["@babel/preset-env"]
+    }))
   .pipe(gulp.dest("build"));
 });
 

@@ -31,7 +31,7 @@
   max-width: 480px;
 }
 
-.want__input {
+.want__form input[type=tel] {
   width: 100%;
 }
 
@@ -80,12 +80,12 @@
     width: 90%;
   }
 
-  .want__input::placeholder {
+  .want__form input[type=tel]::placeholder {
     @include font-size(17px, 20px);
     font-variant: small-caps;
   }
 
-  .want__button {
+  .want__form button[type=submit] {
     position: static;
     margin: 0 auto;
     margin-top: 10px;
