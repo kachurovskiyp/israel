@@ -137,7 +137,7 @@
     <p class="want__text">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
     <form class="want__form" action="index.html">
       <label for="want-tel" class="visually-hidden">Введите ваш номер телефона</label>
-      <input class="want__input" type="tel" id="want-tel" placeholder="телефон" required>
+      <input class="want__input" type="tel" id="want-tel" placeholder="телефон" pattern="[0-9]{5,12}" required>
       <button class="want__button button" type="submit">перезвоните мне</button>
     </form>
   </section>
@@ -709,10 +709,10 @@
         <p class="detail__feedback-notice">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
       </div>
       <label for="feedback-name" class="visually-hidden">Введите ваше имя</label>
-      <input class="feedback__name" type="text" name="name" id="feedback-name" placeholder="Имя" required>
+      <input class="feedback__name" type="text" name="name" id="feedback-name" pattern="^[А-Яа-яЁё\s]+$" placeholder="Имя" required>
 
       <label for="feedback-tel" class="visually-hidden">Введите ваш номер телефона</label>
-      <input class="feedback__tel" type="tel" name="tel" id="feedback-tel" placeholder="+7 (923) 41" required>
+      <input class="feedback__tel" type="tel" name="tel" id="feedback-tel" placeholder="+7 (923) 41" pattern="[0-9]{5,12}" required>
 
       <button type="submit" class="feedback__submit button">перезвоните мне</button>
     </form>
@@ -758,10 +758,10 @@
       <p class="call__text">Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
 
       <label class="visually-hidden" for="name">Ваше имя</label>
-      <input type="text" name="name" id="name" placeholder="Имя">
+      <input type="text" name="name" id="name" placeholder="Имя" pattern="^[А-Яа-яЁё\s]+$">
 
       <label class="visually-hidden" for="tel">Ваш номер телефона</label>
-      <input type="text" name="tel" id="tel" placeholder="Телефон">
+      <input type="text" name="tel" id="tel" pattern="[0-9]{5,12}" placeholder="Телефон">
 
       <button type="submit">перезвоните мне</button>
 

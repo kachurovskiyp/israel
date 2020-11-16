@@ -1,46 +1,46 @@
 'use strict';
 (function () {
-  const headerFeeback = document.querySelector('.header__feedback');
-  const modalCall = document.querySelector('.call');
-  const form = document.querySelector('.call__form');
-  const acceptModal = document.querySelector('.accepted');
-  const modalClose = document.querySelector('.call__close');
+  var headerFeeback = document.querySelector('.header__feedback');
+  var modalCall = document.querySelector('.call');
+  var form = document.querySelector('.call__form');
+  var acceptModal = document.querySelector('.accepted');
+  var modalClose = document.querySelector('.call__close');
 
-  const closeModal = () => {
+  var closeModal = function () {
     modalCall.classList.remove('call--open');
     modalClose.removeEventListener('click', closeModal);
     window.removeEventListener('click', closeModalOverlay);
     window.removeEventListener('keydown', closeModalEsc);
   }
 
-  const closeModalOverlay = (evt) => {
+  var closeModalOverlay = function (evt) {
     if(evt.target === modalCall) {
       closeModal();
     }
   }
 
-  const closeModalEsc = (evt) => {
+  var closeModalEsc = function (evt) {
     if(evt.key === "Escape") {
       closeModal();
     }
   }
 
-  const openAccept = (evt) => {
+  var openAccept = function (evt) {
     evt.preventDefault();
 
     closeModal();
     acceptModal.classList.add('accepted--open');
 
-    const acceptSubmit = acceptModal.querySelector('.modal__submit');
+    var acceptSubmit = acceptModal.querySelector('.modal__submit');
 
-    const closeAccept = () => {
+    var closeAccept = function () {
       acceptModal.classList.remove('accepted--open');
       acceptSubmit.removeEventListener('click', closeAccept);
       window.removeEventListener('click', closeAcceptOverlay);
       window.removeEventListener('keydown', closeAccept);
     }
 
-    const closeAcceptOverlay = (evt) => {
+    var closeAcceptOverlay = function (evt) {
       if(evt.target === acceptModal) {
         closeAccept();
       }
@@ -51,7 +51,7 @@
     acceptSubmit.addEventListener('click', closeAccept);
   }
 
-  headerFeeback.addEventListener('click', () => {
+  headerFeeback.addEventListener('click', function () {
     modalCall.classList.add('call--open');
     modalClose.addEventListener('click', closeModal);
     window.addEventListener('click', closeModalOverlay);
@@ -61,41 +61,41 @@
 
   /* form inside page */
   if(document.querySelector('.want__form')) {
-    const wantForm = document.querySelector('.want__form');
+    var wantForm = document.querySelector('.want__form');
     wantForm.addEventListener('submit', openAccept);
   }
   
   if(document.querySelector('.detail__feedback')) {
-    const detailForm = document.querySelector('.detail__feedback');
+    var detailForm = document.querySelector('.detail__feedback');
     detailForm.addEventListener('submit', openAccept);
   }
   
   /* rewiev slider  */
 
   if(document.querySelector('.review__slider')) {
-    const slider = document.querySelector('.review__slider');
-    const slides = slider.querySelectorAll('.review__slide');
-    const reviewSection = document.querySelector('.review');
+    var slider = document.querySelector('.review__slider');
+    var slides = slider.querySelectorAll('.review__slide');
+    var reviewSection = document.querySelector('.review');
 
-    const slidesNumberSpan = reviewSection.querySelector('.review__number-slides');
+    var slidesNumberSpan = reviewSection.querySelector('.review__number-slides');
     slidesNumberSpan.innerHTML = slides.length;
 
-    let currentSlide = 0;
-    const currentSlideSpan = reviewSection.querySelector('.review__current-slide');
+    var currentSlide = 0;
+    var currentSlideSpan = reviewSection.querySelector('.review__current-slide');
     currentSlideSpan.innerHTML = currentSlide + 1;
 
-    const nextButton = reviewSection.querySelector('.review__next');
-    const prewButton = reviewSection.querySelector('.review__prew');
+    var nextButton = reviewSection.querySelector('.review__next');
+    var prewButton = reviewSection.querySelector('.review__prew');
 
-    const changeSlide = (currentSlide) => {
-      slides.forEach((slide) => {
+    var changeSlide = function (currentSlide) {
+      slides.forEach(function (slide) {
         slide.classList.remove('review__slide--active');
       })
       slides[currentSlide].classList.add('review__slide--active');
       currentSlideSpan.innerHTML = currentSlide + 1;
     }
 
-    const getNextSlide = () => {
+    var getNextSlide = function () {
       if(currentSlide < slides.length - 1) {
         currentSlide++;
       } else {
@@ -104,7 +104,7 @@
       changeSlide(currentSlide);
     }
 
-    const getPrewSlide = () => {
+    var getPrewSlide = function () {
 
       if(currentSlide === 0) {
         currentSlide = slides.length;
@@ -120,53 +120,53 @@
   /* programs change */
  
   if(document.querySelector('.programs')) {
-    const programs = document.querySelector('.programs');
-    const programsButtonItems = programs.querySelectorAll('.programs__item');
-    const programsDescs = programs.querySelectorAll('.programs__description');
+    var programs = document.querySelector('.programs');
+    var programsButtonItems = programs.querySelectorAll('.programs__item');
+    var programsDescs = programs.querySelectorAll('.programs__description');
 
-    const resetButtons = () => {
-      programsButtonItems.forEach((item) => {
+    var resetButtons = function () {
+      programsButtonItems.forEach(function (item) {
         item.classList.remove('programs__item--active');
       });
     }
   
-    const resetDescs = () => {
-      programsDescs.forEach((item) => {
+    var resetDescs = function () {
+      programsDescs.forEach(function (item) {
         item.classList.remove('programs__description--active');
       })
     }
   
-    const changeDesc = (evt) => {
-      const targetClass = `programs__description--${evt.target.value}`;
-      const activeClass = 'programs__description--active';
+    var changeDesc = function (evt) {
+      var targetClass = `programs__description--${evt.target.value}`;
+      var activeClass = 'programs__description--active';
       resetButtons();
       resetDescs();
   
       evt.target.parentNode.classList.add('programs__item--active');
-      programsDescs.forEach((item => {
+      programsDescs.forEach(function (item) {
         if (item.classList.contains(targetClass)) {
           item.classList.add(activeClass);
         }
-      }));
+      });
     }
 
-    programsButtonItems.forEach((item) => {
+    programsButtonItems.forEach(function (item) {
       item.querySelector('button').addEventListener('click', changeDesc);
     })
   }
 
   /* live slider */
   if(document.querySelector('.swiper-container')){
-    const tabletWidth = 767;
-    let liveSlider = undefined;
-    const liveSliderContainer = document.querySelector('.swiper-container');
+    var tabletWidth = 767;
+    var liveSlider = undefined;
+    var liveSliderContainer = document.querySelector('.swiper-container');
 
-    const activeSlider = () => {
+    var activeSlider = function () {
       if(window.innerWidth < tabletWidth) {
         if (!liveSlider) {
           liveSlider = new Swiper(liveSliderContainer);
           liveSliderContainer.querySelector('.swiper-wrapper').classList.remove('swiper-wrapper--block');
-          liveSliderContainer.querySelectorAll('.swiper-slide').forEach((item) => {
+          liveSliderContainer.querySelectorAll('.swiper-slide').forEach(function (item) {
             item.classList.remove('swiper-slide--width-auto');
           })
         }
@@ -177,7 +177,7 @@
           liveSlider.destroy();
           liveSlider = undefined;
           liveSliderContainer.querySelector('.swiper-wrapper').classList.add('swiper-wrapper--block');
-          liveSliderContainer.querySelectorAll('.swiper-slide').forEach((item) => {
+          liveSliderContainer.querySelectorAll('.swiper-slide').forEach(function (item) {
             item.classList.add('swiper-slide--width-auto');
           })
         }
